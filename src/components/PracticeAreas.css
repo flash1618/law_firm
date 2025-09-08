@@ -1,0 +1,81 @@
+/* PracticeAreas.css */
+.practice-areas-container {
+  padding: var(--section-padding);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.practice-areas-container h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--primary-blue);
+}
+
+.practice-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.practice-area-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.practice-area-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.practice-area-card h2 {
+  color: var(--secondary-blue);
+  font-size: 1.8em;
+  margin-bottom: 1rem;
+}
+
+.practice-area-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.practice-area-card ul li {
+  margin-bottom: 0.5rem;
+  color: var(--dark-grey);
+  font-size: 1.1em;
+}
+
+.practice-area-card ul li:before {
+  content: '\2022'; /* Bullet point */
+  color: var(--accent-gold);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.other-services-card h2 {
+  color: var(--secondary-blue);
+  font-size: 1.8em;
+  margin-bottom: 1rem;
+}
+
+.other-services-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.other-services-card ul li {
+  margin-bottom: 0.5rem;
+  color: var(--dark-grey);
+  font-size: 1.1em;
+}
+
+.other-services-card ul li:before {
+  content: '\2022'; /* Bullet point */
+  color: var(--accent-gold);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}

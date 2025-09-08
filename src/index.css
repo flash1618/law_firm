@@ -6,6 +6,7 @@
   --light-grey: #F2F2F2;
   --dark-grey: #333333;
   --accent-gold: #DAA520;
+  --section-padding: 4rem 2rem; /* Consistent padding for sections */
 }
 
 body {

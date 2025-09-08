@@ -1,0 +1,73 @@
+/* MeetOurTeam.css */
+.meet-our-team-container {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.meet-our-team-container h1 {
+  margin-bottom: 3rem;
+  color: var(--primary-blue);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.team-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-card-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: var(--light-grey); /* Placeholder background */
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: var(--secondary-blue);
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.team-card h2 {
+  color: var(--secondary-blue);
+  font-size: 1.5em;
+  margin-bottom: 0.5rem;
+}
+
+.team-card h3 {
+  color: var(--dark-grey);
+  font-size: 1.1em;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.team-card p {
+  color: var(--dark-grey);
+  font-size: 1em;
+  margin-bottom: 0.3rem;
+}
+
+.team-card a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.team-card a:hover {
+  color: var(--accent-gold);
+}

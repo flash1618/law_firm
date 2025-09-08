@@ -1,0 +1,76 @@
+/* ContactUs.css */
+.contact-us-container {
+  padding: var(--section-padding);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-us-container h1 {
+  margin-bottom: 3rem;
+  color: var(--primary-blue);
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.contact-card h2 {
+  color: var(--secondary-blue);
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
+
+.contact-card p,
+.contact-card a {
+  color: var(--dark-grey);
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  color: var(--primary-blue);
+}
+
+.contact-card .icon {
+  margin-right: 0.5rem;
+  color: var(--accent-gold);
+}
+
+.office-hours {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.office-hours h2 {
+  color: var(--secondary-blue);
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.office-hours p {
+  margin-bottom: 0.5rem;
+  color: var(--dark-grey);
+  font-size: 1.1em;
+  display: flex;
+  justify-content: space-between;
+}
