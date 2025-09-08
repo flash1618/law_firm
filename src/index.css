@@ -7,6 +7,8 @@
   --dark-grey: #333333;
   --accent-gold: #DAA520;
   --section-padding: 4rem 2rem; /* Consistent padding for sections */
+  --horizontal-padding: 2rem; /* Consistent horizontal padding for main content */
+  --mobile-padding: 1rem; /* Consistent padding for mobile screens */
 }
 
 body {
@@ -72,13 +74,6 @@ button {
   outline: inherit;
   background: none;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -88,7 +83,26 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .main-content-container {
+    padding: 0 var(--mobile-padding);
   }
 }

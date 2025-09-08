@@ -5,6 +5,32 @@
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .practice-areas-container {
+    padding: var(--section-padding);
+  }
+
+  .practice-areas-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+  }
+
+  .practice-area-card h2 {
+    font-size: 1.5em;
+  }
+
+  .practice-area-card ul li {
+    font-size: 1em;
+  }
+
+  .other-services-card h2 {
+    font-size: 1.5em;
+  }
+
+  .other-services-card ul li {
+    font-size: 1em;
+  }
+}
+
 .practice-areas-container h1 {
   text-align: center;
   margin-bottom: 3rem;

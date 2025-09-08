@@ -74,3 +74,34 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+  .contact-us-container {
+    padding: var(--section-padding);
+  }
+
+  .contact-info-grid {
+    grid-template-columns: 1fr; /* Stack contact cards vertically */
+  }
+
+  .contact-card h2 {
+    font-size: 1.3em;
+  }
+
+  .contact-card p,
+  .contact-card a {
+    font-size: 1em;
+  }
+
+  .office-hours {
+    padding: var(--section-padding);
+  }
+
+  .office-hours h2 {
+    font-size: 1.3em;
+  }
+
+  .office-hours p {
+    font-size: 1em;
+  }
+}

@@ -30,3 +30,22 @@
   margin-bottom: 1rem;
   color: var(--dark-grey);
 }
+
+@media (max-width: 768px) {
+  .legal-policies-container {
+    padding: var(--section-padding);
+  }
+
+  .legal-policies-container h1 {
+    font-size: 2em;
+  }
+
+  .policy-section h2 {
+    font-size: 1.6em;
+  }
+
+  .policy-section p,
+  .policy-section ul li {
+    font-size: 1em;
+  }
+}

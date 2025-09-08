@@ -42,6 +42,28 @@
   margin-top: 1rem;
 }
 
+@media (max-width: 768px) {
+  .testimonials-container {
+    padding: var(--section-padding);
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr; /* Stack testimonials vertically */
+  }
+
+  .google-reviews-section {
+    padding: var(--section-padding);
+  }
+
+  .google-reviews-section h2 {
+    font-size: 2em;
+  }
+
+  .google-reviews-section p {
+    font-size: 1em;
+  }
+}
+
 .google-reviews-section {
   padding: 3rem 2rem;
   background-color: var(--light-grey);

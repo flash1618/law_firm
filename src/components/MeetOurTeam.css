@@ -71,3 +71,25 @@
 .team-card a:hover {
   color: var(--accent-gold);
 }
+
+@media (max-width: 768px) {
+  .meet-our-team-container {
+    padding: var(--section-padding);
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr; /* Stack team cards vertically */
+  }
+
+  .team-card h2 {
+    font-size: 1.3em;
+  }
+
+  .team-card h3 {
+    font-size: 1em;
+  }
+
+  .team-card p {
+    font-size: 0.9em;
+  }
+}

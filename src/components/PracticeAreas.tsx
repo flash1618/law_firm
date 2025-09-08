@@ -2,7 +2,7 @@ import './PracticeAreas.css';
 
 function PracticeAreas() {
   return (
-    <div className="practice-areas-container">
+    <div className="practice-areas-container main-content-container">
       <h1>Our Practice Areas</h1>
       <div className="practice-areas-grid">
         <div className="practice-area-card">

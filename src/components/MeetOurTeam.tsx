@@ -53,7 +53,7 @@ function MeetOurTeam() {
   ];
 
   return (
-    <div className="meet-our-team-container">
+    <div className="meet-our-team-container main-content-container">
       <h1>Meet Our Team</h1>
       <div className="team-grid">
         {teamMembers.map((member, index) => (

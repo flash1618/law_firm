@@ -2,7 +2,7 @@ import './LegalPolicies.css';
 
 function LegalPolicies() {
   return (
-    <div className="legal-policies-container">
+    <div className="legal-policies-container main-content-container">
       <h1>Legal Policies</h1>
 
       <div className="policy-section">

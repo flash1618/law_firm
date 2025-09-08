@@ -132,3 +132,52 @@
 .btn-primary:hover {
   background-color: #e0b852; /* Slightly darker gold on hover */
 }
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: var(--section-padding);
+    min-height: 300px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-content p {
+    font-size: 1em;
+  }
+
+  .about-us-home-section {
+    padding: var(--section-padding);
+    gap: 2rem;
+  }
+
+  .about-us-home-content h2,
+  .why-choose-us-home h2 {
+    font-size: 2em;
+  }
+
+  .why-choose-us-home ul li {
+    font-size: 1em;
+  }
+
+  .success-metrics-section {
+    padding: var(--section-padding);
+  }
+
+  .success-metrics-section h2 {
+    font-size: 2.2em;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr; /* Stack metrics vertically */
+  }
+
+  .metric-card h3 {
+    font-size: 2em;
+  }
+
+  .metric-card p {
+    font-size: 1em;
+  }
+}

@@ -5,7 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Sharper, slightly more pronounced shadow */
+  border-bottom: 3px solid var(--accent-gold); /* Subtle accent line */
 }
 
 .navbar-brand {
@@ -21,6 +22,26 @@
   display: flex;
   align-items: center;
   margin-left: auto; /* Pushes the entire group to the far right */
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none; /* Hidden by default on desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 1rem;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbar-nav {
@@ -74,4 +95,61 @@
 
 .contact-phone:hover {
   color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem var(--mobile-padding);
+  }
+
+  .navbar-brand {
+    margin-right: auto; /* Push brand to left, hamburger to right */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  .navbar-right-group {
+    display: none; /* Hide nav links and contact by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Below navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-blue);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .navbar-right-group.is-open {
+    display: flex; /* Show when open */
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem; /* Space between nav and contact */
+  }
+
+  .nav-item {
+    margin-right: 0;
+    margin-bottom: 0.8rem;
+  }
+
+  .nav-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .navbar-contact {
+    align-items: center; /* Center contact info */
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .contact-text {
+    margin-bottom: 0.5em;
+  }
 }

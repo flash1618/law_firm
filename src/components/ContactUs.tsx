@@ -2,7 +2,7 @@ import './ContactUs.css';
 
 function ContactUs() {
   return (
-    <div className="contact-us-container">
+    <div className="contact-us-container main-content-container">
       <h1>Contact S.J. Bondre & Co.</h1>
 
       <div className="contact-info-grid">
