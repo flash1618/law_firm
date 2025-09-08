@@ -4,16 +4,21 @@ import './Navbar.css';
 function Navbar() {
   return (
     <nav className="navbar">
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About Us</Link></li>
-        <li><Link to="/practice-areas">Practice Areas</Link></li>
-        <li><Link to="/testimonials">Testimonials</Link></li>
-        <li><Link to="/team">Meet Our Team</Link></li>
-        <li><Link to="/contact">Contact Us</Link></li>
-        <li><Link to="/terms-and-conditions">Terms and Conditions</Link></li>
-        <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+      <Link to="/" className="navbar-brand">Law Firm</Link>
+      <ul className="navbar-nav">
+        <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
+        <li className="nav-item"><Link to="/about" className="nav-link">About Us</Link></li>
+        <li className="nav-item"><Link to="/practice-areas" className="nav-link">Practice Areas</Link></li>
+        <li className="nav-item"><Link to="/testimonials" className="nav-link">Testimonials</Link></li>
+        <li className="nav-item"><Link to="/team" className="nav-link">Meet Our Team</Link></li>
+        <li className="nav-item"><Link to="/contact" className="nav-link">Contact Us</Link></li>
+        <li className="nav-item"><Link to="/terms-and-conditions" className="nav-link">Terms and Conditions</Link></li>
+        <li className="nav-item"><Link to="/privacy-policy" className="nav-link">Privacy Policy</Link></li>
       </ul>
+      <div className="navbar-contact">
+        <span className="contact-text">Call us Today</span>
+        <a href="tel:+919322593358" className="contact-phone">+91 9322593358</a>
+      </div>
     </nav>
   );
 }
