@@ -117,6 +117,57 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* Banks Served Section */
+.banks-served-section {
+  padding: var(--section-padding);
+  background-color: white;
+  text-align: center;
+  border-top: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.banks-served-section h2 {
+  color: var(--primary-blue);
+  margin-bottom: 1.5rem;
+  font-size: 2.5em;
+}
+
+.banks-served-section p {
+  color: var(--dark-grey);
+  font-size: 1.1em;
+  margin-bottom: 2rem;
+}
+
+.bank-logos-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  max-width: 100%;
+  padding: 1rem 0;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: scroll-left 20s linear infinite;
+}
+
+.bank-logo {
+  height: 60px; /* Adjust as needed */
+  margin: 0 2rem;
+  vertical-align: middle;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.bank-logo:hover {
+  opacity: 1;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
 .btn-primary {
   background-color: var(--accent-gold);
   color: var(--primary-blue);
@@ -179,5 +230,22 @@
 
   .metric-card p {
     font-size: 1em;
+  }
+
+  .banks-served-section {
+    padding: var(--section-padding);
+  }
+
+  .banks-served-section h2 {
+    font-size: 2em;
+  }
+
+  .banks-served-section p {
+    font-size: 1em;
+  }
+
+  .bank-logo {
+    height: 40px; /* Smaller logos on mobile */
+    margin: 0 1rem; /* Less space between logos on mobile */
   }
 }

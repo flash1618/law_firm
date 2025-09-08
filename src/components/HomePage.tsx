@@ -1,6 +1,22 @@
 import './HomePage.css';
+import bankofindiaLogo from '../assets/banks/Boi.png';
+import centralbankLogo from '../assets/banks/centralbank.png';
+import statebankofindiaLogo from '../assets/banks/sbi.png';
+import unionbankofindiaLogo from '../assets/banks/union-bank-of-india.svg';
 
 function HomePage() {
+  const bankLogos = [
+    { src: bankofindiaLogo, alt: 'Bank of India' },
+    { src: centralbankLogo, alt: 'Central Bank' },
+    { src: statebankofindiaLogo, alt: 'State Bank of India' },
+    { src: unionbankofindiaLogo, alt: 'Union Bank of India' },
+    // Duplicate for continuous scroll effect
+    { src: bankofindiaLogo, alt: 'Bank of India' },
+    { src: centralbankLogo, alt: 'Central Bank' },
+    { src: statebankofindiaLogo, alt: 'State Bank of India' },
+    { src: unionbankofindiaLogo, alt: 'Union Bank of India' },
+  ];
+
   return (
     <div className="homepage">
       <section className="hero-section">
@@ -48,6 +64,21 @@ function HomePage() {
             <div className="metric-card">
               <h3>95%</h3>
               <p>Client Satisfaction</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="banks-served-section">
+        <div className="main-content-container">
+          <h2>Banks Served</h2>
+          <p>Our senior advocate is also on the bank panel of a few banks, including:</p>
+          <p>Bank Of India, Central Bank, State Bank of India, Union Bank of India and more...</p>
+          <div className="bank-logos-marquee">
+            <div className="marquee-content">
+              {bankLogos.map((logo, index) => (
+                <img key={index} src={logo.src} alt={logo.alt} className="bank-logo" />
+              ))}
             </div>
           </div>
         </div>
