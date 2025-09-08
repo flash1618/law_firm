@@ -117,10 +117,12 @@
     top: 60px; /* Below navbar */
     left: 0;
     width: 100%;
-    background-color: var(--primary-blue);
+    background-color: var(--secondary-blue); /* Distinct background for mobile menu */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem 0;
     text-align: center;
+    height: calc(100vh - 60px); /* Fill remaining viewport height */
+    overflow-y: auto; /* Enable scrolling for menu content if it exceeds height */
   }
 
   .navbar-right-group.is-open {

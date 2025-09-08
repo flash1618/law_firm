@@ -19,11 +19,11 @@ function Navbar() {
       </button>
       <div className={`navbar-right-group ${isOpen ? 'is-open' : ''}`}>
         <ul className="navbar-nav">
-          <li className="nav-item"><Link to="/practice-areas" className="nav-link">Practice Areas</Link></li>
-          <li className="nav-item"><Link to="/testimonials" className="nav-link">Testimonials</Link></li>
-          <li className="nav-item"><Link to="/team" className="nav-link">Meet Our Team</Link></li>
-          <li className="nav-item"><Link to="/contact" className="nav-link">Contact Us</Link></li>
-          <li className="nav-item"><Link to="/policies" className="nav-link">Policies</Link></li>
+          <li className="nav-item"><Link to="/practice-areas" className="nav-link" onClick={toggleMenu}>Practice Areas</Link></li>
+          <li className="nav-item"><Link to="/testimonials" className="nav-link" onClick={toggleMenu}>Testimonials</Link></li>
+          <li className="nav-item"><Link to="/team" className="nav-link" onClick={toggleMenu}>Meet Our Team</Link></li>
+          <li className="nav-item"><Link to="/contact" className="nav-link" onClick={toggleMenu}>Contact Us</Link></li>
+          <li className="nav-item"><Link to="/policies" className="nav-link" onClick={toggleMenu}>Policies</Link></li>
         </ul>
         <div className="navbar-contact">
           <span className="contact-text">Call us Today</span>
