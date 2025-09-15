@@ -1,107 +1,302 @@
 /* PracticeAreas.css */
 .practice-areas-container {
   padding: var(--section-padding);
-  max-width: 1000px;
-  margin: 0 auto;
+  background-color: var(--pure-white);
 }
 
-@media (max-width: 768px) {
-  .practice-areas-container {
-    padding: var(--section-padding);
-  }
-
-  .practice-areas-grid {
-    grid-template-columns: 1fr; /* Stack cards vertically */
-  }
-
-  .practice-area-card h2 {
-    font-size: 1.5em;
-  }
-
-  .practice-area-card ul li {
-    font-size: 1em;
-  }
-
-  .other-services-card h2 {
-    font-size: 1.5em;
-  }
-
-  .other-services-card ul li {
-    font-size: 1em;
-  }
-}
-
-.practice-areas-container h1 {
+.practice-areas-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.practice-areas-header h1 {
   color: var(--primary-blue);
+  font-size: 3em;
+  margin-bottom: 1rem;
+}
+
+.practice-areas-header p {
+  font-size: 1.2em;
+  color: var(--dark-grey);
+  line-height: 1.6;
 }
 
 .practice-areas-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
+  margin-bottom: 4rem;
 }
 
 .practice-area-card {
   background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.practice-area-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--accent-gold));
 }
 
 .practice-area-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .practice-area-card h2 {
-  color: var(--secondary-blue);
-  font-size: 1.8em;
+  color: var(--primary-blue);
   margin-bottom: 1rem;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.card-description {
+  color: var(--dark-grey);
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  font-style: italic;
 }
 
 .practice-area-card ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 1.5rem;
 }
 
-.practice-area-card ul li {
-  margin-bottom: 0.5rem;
+.practice-area-card li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
   color: var(--dark-grey);
-  font-size: 1.1em;
+  line-height: 1.5;
 }
 
-.practice-area-card ul li:before {
-  content: '\2022'; /* Bullet point */
+.practice-area-card li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
   color: var(--accent-gold);
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
+  font-weight: bold;
 }
 
-.other-services-card h2 {
-  color: var(--secondary-blue);
-  font-size: 1.8em;
+.card-footer {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.experience {
+  background-color: var(--accent-gold);
+  color: var(--primary-blue);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.additional-services {
+  background-color: var(--light-grey);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 4rem;
+}
+
+.additional-services h2 {
+  color: var(--primary-blue);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5em;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service-item {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.service-item h3 {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  font-size: 1.3em;
+}
+
+.service-item p {
+  color: var(--dark-grey);
+  line-height: 1.5;
+}
+
+.why-choose-us {
+  margin-bottom: 4rem;
+}
+
+.why-choose-us h2 {
+  color: var(--primary-blue);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5em;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-item {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 3em;
   margin-bottom: 1rem;
 }
 
-.other-services-card ul {
-  list-style: none;
-  padding: 0;
+.feature-item h3 {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  font-size: 1.3em;
 }
 
-.other-services-card ul li {
-  margin-bottom: 0.5rem;
+.feature-item p {
   color: var(--dark-grey);
-  font-size: 1.1em;
+  line-height: 1.5;
 }
 
-.other-services-card ul li:before {
-  content: '\2022'; /* Bullet point */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.cta-section h2 {
   color: var(--accent-gold);
+  margin-bottom: 1rem;
+  font-size: 2.5em;
+}
+
+.cta-section p {
+  font-size: 1.2em;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.8em 2em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
   display: inline-block;
-  width: 1em;
-  margin-left: -1em;
+}
+
+.btn-primary {
+  background-color: var(--accent-gold);
+  color: var(--primary-blue);
+}
+
+.btn-primary:hover {
+  background-color: #d97706;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid var(--accent-gold);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-gold);
+  color: var(--primary-blue);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .practice-areas-header h1 {
+    font-size: 2.2em;
+  }
+
+  .practice-areas-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .practice-area-card {
+    padding: 1.5rem;
+  }
+
+  .additional-services h2,
+  .why-choose-us h2,
+  .cta-section h2 {
+    font-size: 2em;
+  }
+
+  .services-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+  }
 }

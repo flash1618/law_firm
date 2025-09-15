@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import './HomePage.css';
 import bankofindiaLogo from '../assets/banks/Boi.png';
 import centralbankLogo from '../assets/banks/centralbank.png';
@@ -5,6 +6,30 @@ import statebankofindiaLogo from '../assets/banks/sbi.png';
 import unionbankofindiaLogo from '../assets/banks/union-bank-of-india.svg';
 
 function HomePage() {
+  const [disclaimerAccepted, setDisclaimerAccepted] = useState(false);
+
+  useEffect(() => {
+    // Check if disclaimer was already accepted in this session (not localStorage)
+    const checkDisclaimer = () => {
+      const accepted = sessionStorage.getItem('disclaimerAccepted') === 'true';
+      if (accepted) {
+        setDisclaimerAccepted(true);
+      }
+    };
+
+    // Listen for a custom event when disclaimer is accepted
+    const handleDisclaimerAccepted = () => {
+      setDisclaimerAccepted(true);
+    };
+
+    // Check immediately and listen for the custom event
+    checkDisclaimer();
+    window.addEventListener('disclaimerAccepted', handleDisclaimerAccepted);
+    
+    return () => {
+      window.removeEventListener('disclaimerAccepted', handleDisclaimerAccepted);
+    };
+  }, []);
   const bankLogos = [
     { src: bankofindiaLogo, alt: 'Bank of India' },
     { src: centralbankLogo, alt: 'Central Bank' },
@@ -20,10 +45,15 @@ function HomePage() {
   return (
     <div className="homepage">
       <section className="hero-section">
-        <div className="hero-content main-content-container">
-          <h1>Experienced Advocates & Legal Consultants</h1>
-          <p>S.J. Bondre & Co. | Navi Mumbai & Maharashtra - Providing practical, client-first legal solutions.</p>
-          <button className="btn-primary">Book a Free Consultation</button>
+        <div className={`hero-content main-content-container ${disclaimerAccepted ? 'animate' : ''}`}>
+          <div className="hero-text">
+            <h1>Experienced Advocates & Legal Consultants</h1>
+            <p>S.J. Bondre & Co. | Navi Mumbai & Maharashtra - Providing practical, client-first legal solutions.</p>
+            <div className="hero-buttons">
+              <button className="btn-primary">Book a Free Consultation</button>
+              <button className="btn-secondary">Our Services</button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -31,7 +61,7 @@ function HomePage() {
         <div className="about-us-home-content main-content-container">
           <h2>About S.J. Bondre & Co.</h2>
           <p>
-            Founded in 2005, S.J. Bondre & Co. is a Panvel-based law firm dedicated to providing practical, client-first legal solutions. We serve individuals and families across Maharashtra in areas such as Family Law, Property and Real Estate, Testamentary Law, Consumer Law, and more.
+                Founded in 1996, S.J. Bondre & Co. is a Panvel-based law firm dedicated to providing practical, client-first legal solutions. We serve individuals and families across Maharashtra in areas such as Family Law, Property and Real Estate, Testamentary Law, Consumer Law, and more.
           </p>
           <p>
             We combine experience with empathy, offering each client personalized attention and case-specific strategies for the best outcomes. With over 18 Years of service, our team continues to deliver efficient, cost-conscious, and result-oriented legal assistance.

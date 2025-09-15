@@ -1,38 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --primary-blue: #003366;
-  --secondary-blue: #336699;
-  --light-grey: #F2F2F2;
-  --dark-grey: #333333;
-  --accent-gold: #DAA520;
-  --section-padding: 4rem 2rem; /* Consistent padding for sections */
+  --primary-navy: #11294E; /* Deep navy blue */
+  --secondary-blue: #2d5a87; /* Medium blue */
+  --accent-orange: #CC7B57; /* Warm orange accent */
+  --texture-brown: #BF855C; /* Texture brown */
+  --background: #D7E0E4; /* Light blue-grey background */
+  --pure-white: #ffffff;
+  --card-bg: #ffffff; /* White card background */
+  --text-dark: #11294E; /* Dark navy text */
+  --text-light: #4a5568; /* Medium grey text */
+  --text-muted: #6b7280; /* Muted text */
+  --gold-accent: #d4af37; /* Gold for special accents */
+  --section-padding: 6rem 2rem; /* Increased padding for modern look */
   --horizontal-padding: 2rem; /* Consistent horizontal padding for main content */
   --mobile-padding: 1rem; /* Consistent padding for mobile screens */
+  --border-radius: 12px; /* Modern border radius */
+  --shadow-light: 0 4px 20px rgba(17, 41, 78, 0.1);
+  --shadow-medium: 0 8px 30px rgba(17, 41, 78, 0.15);
+  --shadow-heavy: 0 12px 40px rgba(17, 41, 78, 0.2);
 }
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--light-grey);
-  color: var(--dark-grey);
-  background-image: linear-gradient(0deg, var(--light-grey) 50%, rgba(0, 0, 0, 0.02) 50%);
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
+  background: url('/src/assets/back/Untitled%20design%20(6).png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: var(--text-dark);
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', sans-serif;
-  color: var(--primary-blue);
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--primary-navy);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.02em;
 }
 
 h1 {
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
   font-size: 3em;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 0.5em;
+  letter-spacing: -0.02em;
 }
 
 h2 {

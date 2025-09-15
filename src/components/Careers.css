@@ -1,0 +1,251 @@
+.careers-container {
+  padding: var(--section-padding);
+  background-color: var(--pure-white);
+  color: var(--dark-grey);
+}
+
+.careers-container h1 {
+  color: var(--primary-blue);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 3em;
+}
+
+.careers-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.careers-intro p {
+  font-size: 1.2em;
+  line-height: 1.7;
+  color: var(--dark-grey);
+}
+
+.careers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.career-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.career-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.career-card h3 {
+  color: var(--primary-blue);
+  font-size: 1.8em;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-gold);
+  padding-bottom: 0.5rem;
+}
+
+.career-details {
+  background-color: var(--light-grey);
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+}
+
+.career-details p {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.career-description h4 {
+  color: var(--primary-blue);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2em;
+}
+
+.career-description ul {
+  margin: 0.5rem 0 1rem 1.5rem;
+  padding: 0;
+}
+
+.career-description li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.btn-apply {
+  background-color: var(--accent-gold);
+  color: var(--primary-blue);
+  padding: 0.8em 2em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.btn-apply:hover {
+  background-color: #d97706;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.careers-benefits {
+  background-color: var(--light-grey);
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 4rem;
+}
+
+.careers-benefits h2 {
+  color: var(--primary-blue);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5em;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.benefit-item h4 {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  font-size: 1.3em;
+}
+
+.benefit-item p {
+  line-height: 1.6;
+  color: var(--dark-grey);
+}
+
+.application-process {
+  margin-bottom: 4rem;
+}
+
+.application-process h2 {
+  color: var(--primary-blue);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5em;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.step {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.step-number {
+  background-color: var(--accent-gold);
+  color: var(--primary-blue);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0 auto 1rem auto;
+}
+
+.step h4 {
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+  font-size: 1.2em;
+}
+
+.step p {
+  line-height: 1.5;
+  color: var(--dark-grey);
+}
+
+.careers-contact {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.careers-contact h2 {
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+  font-size: 2.2em;
+}
+
+.careers-contact p {
+  font-size: 1.1em;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  font-size: 1.1em;
+}
+
+.contact-info strong {
+  color: var(--accent-gold);
+}
+
+@media (max-width: 768px) {
+  .careers-container h1 {
+    font-size: 2.2em;
+  }
+
+  .careers-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .career-card {
+    padding: 1.5rem;
+  }
+
+  .careers-benefits h2,
+  .application-process h2 {
+    font-size: 2em;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .careers-contact h2 {
+    font-size: 1.8em;
+  }
+}
