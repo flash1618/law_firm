@@ -154,7 +154,7 @@ function ContactUs() {
               </div>
               <div className="form-group">
                 <label htmlFor="message">Message *</label>
-                <textarea id="message" name="message" rows="5" required placeholder="Please describe your legal matter in detail..."></textarea>
+                <textarea id="message" name="message" rows={5} required placeholder="Please describe your legal matter in detail..."></textarea>
               </div>
               <div className="form-group checkbox-group">
                 <label className="checkbox-label">
