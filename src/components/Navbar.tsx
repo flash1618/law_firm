@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
@@ -9,12 +9,38 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isOpen && !(event.target as Element)?.closest('.navbar')) {
+        closeMenu();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('click', handleClickOutside);
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   return (
     <nav className="navbar">
-      <Link to="/" className="navbar-brand">
+      <Link to="/" className="navbar-brand" onClick={closeMenu}>
         S.J. Bondre & Co.
       </Link>
-      <button className="hamburger" onClick={toggleMenu}>
+      <button className={`hamburger ${isOpen ? 'is-open' : ''}`} onClick={toggleMenu} aria-label="Toggle navigation menu">
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>

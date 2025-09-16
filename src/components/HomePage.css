@@ -18,6 +18,10 @@
   position: relative;
 }
 
+.mobile-justice-image {
+  display: none;
+}
+
 
 .hero-section::before {
   content: '';
@@ -70,7 +74,8 @@
 }
 
 .hero-content.animate {
-  /* No animation - hero text is always visible */
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero-text {
@@ -94,7 +99,8 @@
 }
 
 .hero-content.animate h1 {
-  /* No animation - hero text is always visible */
+  opacity: 1;
+  transform: translateX(0);
 }
 
 @keyframes shimmer {
@@ -551,55 +557,104 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: var(--section-padding);
-    min-height: 500px;
+    padding: var(--mobile-section-padding);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-content {
     max-width: 100%;
     width: 100%;
+    padding: 2rem 1rem;
+    margin-left: 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
   }
 
-  .hero-section::before,
+  .hero-section::before {
+    display: none;
+  }
+
   .hero-section::after {
     display: none;
   }
 
+  .mobile-justice-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0.15;
+    background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-blue) 100%);
+  }
+
+  .mobile-justice-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.8) contrast(1.2);
+  }
+
   .hero-content h1 {
-    font-size: 2.5em;
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 1.5rem;
   }
 
   .hero-content p {
-    font-size: 1em;
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 100%;
   }
 
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+    width: 100%;
   }
 
   .btn-primary,
   .btn-secondary {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
+    padding: 1rem 2rem;
+    font-size: 1.1em;
+    min-height: var(--touch-target-min);
   }
 
   .about-us-home-section {
-    padding: var(--section-padding);
-    gap: 2rem;
+    padding: var(--mobile-section-padding);
+    gap: 3rem;
   }
 
   .about-us-home-content h2,
   .why-choose-us-home h2 {
-    font-size: 2em;
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  .about-us-home-content p {
+    font-size: 1.1em;
+    text-align: center;
   }
 
   .why-choose-us-home ul li {
     font-size: 1em;
+    padding: 2rem 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .success-metrics-section {
-    padding: var(--section-padding);
+    padding: var(--mobile-section-padding);
   }
 
   .success-metrics-section h2 {
@@ -607,11 +662,16 @@
   }
 
   .metrics-grid {
-    grid-template-columns: 1fr; /* Stack metrics vertically */
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .metric-card {
+    padding: 2rem 1.5rem;
   }
 
   .metric-card h3 {
-    font-size: 2em;
+    font-size: 2.2em;
   }
 
   .metric-card p {
@@ -619,11 +679,11 @@
   }
 
   .banks-served-section {
-    padding: var(--section-padding);
+    padding: var(--mobile-section-padding);
   }
 
   .banks-served-section h2 {
-    font-size: 2em;
+    font-size: 2.2em;
   }
 
   .banks-served-section p {
@@ -631,7 +691,49 @@
   }
 
   .bank-logo {
-    height: 40px; /* Smaller logos on mobile */
-    margin: 0 1rem; /* Less space between logos on mobile */
+    height: 45px;
+    margin: 0 1.5rem;
+  }
+
+  .marquee-content {
+    animation-duration: 25s; /* Slower on mobile for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-content p {
+    font-size: 1em;
+  }
+
+  .about-us-home-content h2,
+  .why-choose-us-home h2 {
+    font-size: 1.8em;
+  }
+
+  .success-metrics-section h2,
+  .banks-served-section h2 {
+    font-size: 1.8em;
+  }
+
+  .why-choose-us-home ul li {
+    padding: 1.5rem 1rem;
+    font-size: 0.95em;
+  }
+
+  .metric-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .metric-card h3 {
+    font-size: 1.8em;
+  }
+
+  .bank-logo {
+    height: 35px;
+    margin: 0 1rem;
   }
 }

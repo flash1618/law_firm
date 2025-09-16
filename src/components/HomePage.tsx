@@ -45,6 +45,9 @@ function HomePage() {
   return (
     <div className="homepage">
       <section className="hero-section">
+        <div className="mobile-justice-image">
+          <img src="/src/assets/justice/justice2.png" alt="Lady Justice" />
+        </div>
         <div className={`hero-content main-content-container ${disclaimerAccepted ? 'animate' : ''}`}>
           <div className="hero-text">
             <h1>Experienced Advocates & Legal Consultants</h1>

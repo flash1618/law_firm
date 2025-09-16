@@ -264,8 +264,17 @@
 }
 
 @media (max-width: 768px) {
+  .practice-areas-container {
+    padding: var(--mobile-section-padding);
+  }
+
   .practice-areas-header h1 {
     font-size: 2.2em;
+    margin-bottom: 1.5rem;
+  }
+
+  .practice-areas-header p {
+    font-size: 1.1em;
   }
 
   .practice-areas-grid {
@@ -275,28 +284,148 @@
 
   .practice-area-card {
     padding: 1.5rem;
+    margin-bottom: 1rem;
   }
 
-  .additional-services h2,
-  .why-choose-us h2,
-  .cta-section h2 {
+  .card-icon {
+    font-size: 2.5em;
+  }
+
+  .practice-area-card h2 {
+    font-size: 1.4em;
+    margin-bottom: 1rem;
+  }
+
+  .card-description {
+    font-size: 0.95em;
+    margin-bottom: 1.25rem;
+  }
+
+  .practice-area-card ul {
+    margin-bottom: 1.25rem;
+  }
+
+  .practice-area-card li {
+    font-size: 0.95em;
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+  }
+
+  .additional-services {
+    padding: 2rem 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .additional-services h2 {
     font-size: 2em;
+    margin-bottom: 1.5rem;
   }
 
-  .services-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-item {
+    padding: 1.25rem;
+  }
+
+  .service-item h3 {
+    font-size: 1.2em;
+        margin-bottom: 0.75rem;
+  }
+
+  .service-item p {
+    font-size: 0.95em;
+  }
+
+  .why-choose-us {
+    margin-bottom: 3rem;
+  }
+
+  .why-choose-us h2 {
+    font-size: 2em;
+    margin-bottom: 2rem;
+  }
+
   .features-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
+  .feature-item {
+    padding: 1.5rem 1rem;
+  }
+
+  .feature-icon {
+    font-size: 2.5em;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-item p {
+    font-size: 0.95em;
+  }
+
+  .cta-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .cta-section h2 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.1em;
+    margin-bottom: 1.5rem;
+  }
+
   .cta-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
 
   .btn-primary,
   .btn-secondary {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
+    padding: 1rem 2rem;
+    font-size: 1.1em;
+    min-height: var(--touch-target-min);
+  }
+}
+
+@media (max-width: 480px) {
+  .practice-areas-header h1 {
+    font-size: 1.8em;
+  }
+
+  .practice-area-card {
+    padding: 1.25rem;
+  }
+
+  .practice-area-card h2 {
+    font-size: 1.3em;
+  }
+
+  .additional-services h2,
+  .why-choose-us h2,
+  .cta-section h2 {
+    font-size: 1.6em;
+  }
+
+  .service-item,
+  .feature-item {
+    padding: 1rem;
+  }
+
+  .cta-section {
+    padding: 1.5rem 1rem;
   }
 }

@@ -19,6 +19,12 @@
   --shadow-light: 0 4px 20px rgba(17, 41, 78, 0.1);
   --shadow-medium: 0 8px 30px rgba(17, 41, 78, 0.15);
   --shadow-heavy: 0 12px 40px rgba(17, 41, 78, 0.2);
+  
+  /* Mobile-specific variables */
+  --mobile-section-padding: 3rem 1rem;
+  --mobile-horizontal-padding: 1rem;
+  --touch-target-min: 44px; /* Minimum touch target size for mobile */
+  --mobile-font-scale: 0.875; /* Mobile font scaling factor */
 }
 
 body {
@@ -109,24 +115,92 @@ button {
   }
 }
 
+/* Mobile-first responsive design */
+@media (max-width: 1200px) {
+  .main-content-container {
+    padding: 0 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
+  :root {
+    --section-padding: var(--mobile-section-padding);
+    --horizontal-padding: var(--mobile-horizontal-padding);
+  }
+
   h1 {
     font-size: 2.2em;
+    line-height: 1.2;
   }
 
   h2 {
     font-size: 1.8em;
+    line-height: 1.3;
   }
 
   h3 {
     font-size: 1.4em;
+    line-height: 1.4;
   }
 
   p {
     font-size: 1em;
+    line-height: 1.6;
   }
 
   .main-content-container {
     padding: 0 var(--mobile-padding);
+  }
+
+  /* Ensure all interactive elements meet touch target requirements */
+  button, 
+  input[type="submit"], 
+  input[type="button"], 
+  a[role="button"],
+  .btn-primary,
+  .btn-secondary {
+    min-height: var(--touch-target-min);
+    min-width: var(--touch-target-min);
+  }
+
+  /* Improve text readability on mobile */
+  body {
+    font-size: 16px; /* Prevent zoom on iOS */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  /* Better spacing for mobile */
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  .main-content-container {
+    padding: 0 0.75rem;
+  }
+}
+
+/* Landscape mobile optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-section {
+    min-height: 70vh;
+  }
+  
+  .hero-content {
+    padding: 2rem 1rem;
   }
 }

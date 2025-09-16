@@ -413,31 +413,167 @@
 }
 
 @media (max-width: 768px) {
+  .contact-us-container {
+    padding: var(--mobile-section-padding);
+  }
+
   .contact-header h1 {
     font-size: 2.2em;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-header p {
+    font-size: 1.1em;
   }
 
   .contact-main-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 
   .contact-info-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .contact-card {
     padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .card-icon {
+    font-size: 2em;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-header h2 {
+    font-size: 1.4em;
+  }
+
+  .phone-list,
+  .email-list {
+    gap: 1rem;
+  }
+
+  .phone-item,
+  .email-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+
+  .phone-label,
+  .email-label {
+    font-size: 0.9em;
+  }
+
+  .phone-number,
+  .email-address {
+    font-size: 1.1em;
+    word-break: break-all;
+  }
+
+  .office-hours {
+    padding: 1.5rem;
+  }
+
+  .office-hours h2 {
+    font-size: 1.8em;
+    margin-bottom: 1.5rem;
+  }
+
+  .hours-grid {
+    gap: 0.75rem;
+  }
+
+  .hours-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .consultation-note {
+    padding: 1rem;
+  }
+
+  .contact-form-section {
+    padding: 1.5rem;
+  }
+
+  .contact-form-card {
+    padding: 1.5rem;
+  }
+
+  .contact-form-card h2 {
+    font-size: 1.8em;
   }
 
   .form-row {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .office-hours h2,
-  .map-section h2,
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 1rem;
+    font-size: 16px; /* Prevent zoom on iOS */
+    min-height: var(--touch-target-min);
+  }
+
+  .form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .checkbox-group {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .checkbox-label {
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+
+  .btn-submit {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.1em;
+    min-height: var(--touch-target-min);
+  }
+
+  .map-section h2 {
+    font-size: 1.8em;
+  }
+
+  .map-container {
+    padding: 1.5rem;
+  }
+
+  .map-placeholder {
+    padding: 2rem 1rem;
+  }
+
+  .map-icon {
+    font-size: 3em;
+  }
+
+  .emergency-contact {
+    padding: 2rem 1.5rem;
+  }
+
   .emergency-contact h2 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   .emergency-contacts {
@@ -445,7 +581,44 @@
     gap: 1.5rem;
   }
 
+  .emergency-item {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+
+  .emergency-number {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-header h1 {
+    font-size: 1.8em;
+  }
+
+  .contact-card {
+    padding: 1rem;
+  }
+
+  .card-header h2 {
+    font-size: 1.2em;
+  }
+
+  .office-hours h2,
+  .contact-form-card h2,
+  .map-section h2,
+  .emergency-contact h2 {
+    font-size: 1.5em;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.875rem;
+  }
+
   .btn-submit {
-    width: 100%;
+    padding: 0.875rem 1.5rem;
   }
 }
