@@ -4,6 +4,7 @@ import bankofindiaLogo from '../assets/banks/Boi.png';
 import centralbankLogo from '../assets/banks/centralbank.png';
 import statebankofindiaLogo from '../assets/banks/sbi.png';
 import unionbankofindiaLogo from '../assets/banks/union-bank-of-india.svg';
+import justiceImage from '../assets/justice/justice2.png';
 
 function HomePage() {
   const [disclaimerAccepted, setDisclaimerAccepted] = useState(false);
@@ -46,7 +47,7 @@ function HomePage() {
     <div className="homepage">
       <section className="hero-section">
         <div className="mobile-justice-image">
-          <img src="/src/assets/justice/justice2.png" alt="Lady Justice" />
+          <img src={justiceImage} alt="Lady Justice" />
         </div>
         <div className={`hero-content main-content-container ${disclaimerAccepted ? 'animate' : ''}`}>
           <div className="hero-text">
