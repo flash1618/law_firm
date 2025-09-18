@@ -221,6 +221,58 @@
   opacity: 0.9;
 }
 
+.consultation-details {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.consultation-details h3 {
+  color: var(--accent-gold);
+  font-size: 1.8em;
+  margin-bottom: 1rem;
+}
+
+.consultation-details p {
+  font-size: 1.1em;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+
+.contact-info {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.contact-info p {
+  margin: 0.75rem 0;
+  font-size: 1em;
+}
+
+.contact-info a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: white;
+}
+
+.free-consultation {
+  background: var(--accent-gold);
+  color: var(--primary-navy);
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-top: 1rem !important;
+}
+
 .cta-buttons {
   display: flex;
   gap: 1rem;
@@ -427,5 +479,26 @@
 
   .cta-section {
     padding: 1.5rem 1rem;
+  }
+
+  .consultation-details {
+    padding: 1.5rem;
+  }
+
+  .consultation-details h3 {
+    font-size: 1.5em;
+  }
+
+  .consultation-details p {
+    font-size: 1em;
+  }
+
+  .contact-info {
+    padding: 1.25rem;
+  }
+
+  .free-consultation {
+    padding: 0.875rem;
+    font-size: 0.95em;
   }
 }

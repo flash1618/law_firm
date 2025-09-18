@@ -161,81 +161,6 @@
   /* Animation removed */
 }
 
-/* Consultation Section */
-.consultation-section {
-  background: linear-gradient(135deg, var(--accent-orange) 0%, var(--texture-brown) 100%);
-  color: var(--pure-white);
-  padding: var(--section-padding);
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.consultation-section h2 {
-  color: var(--pure-white);
-  font-size: 2.5em;
-  margin-bottom: 2rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.consultation-content {
-  max-width: 800px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
-  align-items: center;
-}
-
-.consultation-info h3 {
-  color: var(--pure-white);
-  font-size: 1.8em;
-  margin-bottom: 1rem;
-}
-
-.consultation-info p {
-  font-size: 1.2em;
-  margin-bottom: 1.5rem;
-  opacity: 0.95;
-}
-
-.contact-details {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
-  border-radius: var(--border-radius);
-  backdrop-filter: blur(10px);
-}
-
-.contact-details p {
-  margin: 0.75rem 0;
-  font-size: 1.1em;
-}
-
-.contact-details a {
-  color: var(--pure-white);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.contact-details a:hover {
-  color: var(--gold-accent);
-}
-
-.consultation-highlight {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  border: 2px solid var(--gold-accent);
-}
-
-.consultation-highlight p {
-  font-size: 1.3em;
-  font-weight: 700;
-  color: var(--gold-accent);
-  margin: 0;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-}
-
 /* About Us Home Section */
 .about-us-home-section {
   padding: var(--section-padding);
@@ -810,38 +735,5 @@
   .bank-logo {
     height: 35px;
     margin: 0 1rem;
-  }
-
-  .consultation-section {
-    padding: var(--mobile-section-padding);
-  }
-
-  .consultation-section h2 {
-    font-size: 2em;
-  }
-
-  .consultation-content {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .consultation-info h3 {
-    font-size: 1.5em;
-  }
-
-  .consultation-info p {
-    font-size: 1.1em;
-  }
-
-  .contact-details {
-    padding: 1.25rem;
-  }
-
-  .consultation-highlight {
-    padding: 1.5rem;
-  }
-
-  .consultation-highlight p {
-    font-size: 1.1em;
   }
 }

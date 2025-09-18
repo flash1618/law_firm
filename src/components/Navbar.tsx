@@ -23,15 +23,10 @@ function Navbar() {
 
     if (isOpen) {
       document.addEventListener('click', handleClickOutside);
-      // Prevent body scroll when menu is open
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
     }
 
     return () => {
       document.removeEventListener('click', handleClickOutside);
-      document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
 

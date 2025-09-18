@@ -61,26 +61,6 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="consultation-section">
-        <div className="main-content-container">
-          <h2>Quick Legal Consultation</h2>
-          <div className="consultation-content">
-            <div className="consultation-info">
-              <h3>10 Minutes Consultation</h3>
-              <p><strong>Only on call</strong> - Don't hesitate and get your doubts cleared!</p>
-              <div className="contact-details">
-                <p><strong>Call:</strong> <a href="tel:+919322593358">+91 9322593358</a></p>
-                <p><strong>Email:</strong> <a href="mailto:adv.s.bondre@gmail.com">adv.s.bondre@gmail.com</a></p>
-                <p><strong>By Appointment Only</strong></p>
-              </div>
-            </div>
-            <div className="consultation-highlight">
-              <p><strong>First 15 minutes consultation is FREE for new clients!</strong></p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="about-us-home-section">
         <div className="about-us-home-content main-content-container">
           <h2>About S.J. Bondre & Co.</h2>

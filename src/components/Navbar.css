@@ -45,7 +45,6 @@
   z-index: 1000; /* Ensure it's above other content */
   min-width: var(--touch-target-min);
   min-height: var(--touch-target-min);
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;

@@ -170,7 +170,16 @@ function PracticeAreas() {
 
       <div className="cta-section">
         <h2>Need Legal Assistance?</h2>
-        <p>Contact us today for a free consultation and let us help you with your legal matters.</p>
+        <div className="consultation-details">
+          <h3>10 Minutes Consultation</h3>
+          <p><strong>Only on call</strong> - Don't hesitate and get your doubts cleared!</p>
+          <div className="contact-info">
+            <p><strong>Call:</strong> <a href="tel:+919322593358">+91 9322593358</a></p>
+            <p><strong>Email:</strong> <a href="mailto:adv.s.bondre@gmail.com">adv.s.bondre@gmail.com</a></p>
+            <p><strong>By Appointment Only</strong></p>
+            <p className="free-consultation"><strong>First 15 minutes consultation is FREE for new clients!</strong></p>
+          </div>
+        </div>
         <div className="cta-buttons">
           <button className="btn-primary">Book Free Consultation</button>
           <button className="btn-secondary">Call Now: +91 9322593358</button>
