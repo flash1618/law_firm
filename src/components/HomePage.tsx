@@ -1,9 +1,15 @@
 import { useState, useEffect } from 'react';
 import './HomePage.css';
-import bankofindiaLogo from '../assets/banks/Boi.png';
+import bankofindiaLogo from '../assets/banks/BankOfIndia.png';
 import centralbankLogo from '../assets/banks/centralbank.png';
-import statebankofindiaLogo from '../assets/banks/sbi.png';
+import statebankofindiaLogo from '../assets/banks/StateBankOfIndia.png';
 import unionbankofindiaLogo from '../assets/banks/union-bank-of-india.svg';
+import federalbankLogo from '../assets/banks/FederakBank.png';
+import dnyandeepLogo from '../assets/banks/Dnyandeep.jpg';
+import gsmahanagatLogo from '../assets/banks/GSMahanagat.jpg';
+import ssbankLogo from '../assets/banks/SSBank.jpg';
+import baramatiLogo from '../assets/banks/theBaramati.jpg';
+import nationalLogo from '../assets/banks/TheNational.jpg';
 import justiceImage from '../assets/justice/justice2.png';
 
 function HomePage() {
@@ -33,14 +39,26 @@ function HomePage() {
   }, []);
   const bankLogos = [
     { src: bankofindiaLogo, alt: 'Bank of India' },
-    { src: centralbankLogo, alt: 'Central Bank' },
+    { src: centralbankLogo, alt: 'Central Bank of India' },
     { src: statebankofindiaLogo, alt: 'State Bank of India' },
     { src: unionbankofindiaLogo, alt: 'Union Bank of India' },
+    { src: federalbankLogo, alt: 'Federal Bank' },
+    { src: dnyandeepLogo, alt: 'Dnyandeep Bank' },
+    { src: gsmahanagatLogo, alt: 'GS Mahanagat Bank' },
+    { src: ssbankLogo, alt: 'SS Bank' },
+    { src: baramatiLogo, alt: 'The Baramati Bank' },
+    { src: nationalLogo, alt: 'The National Bank' },
     // Duplicate for continuous scroll effect
     { src: bankofindiaLogo, alt: 'Bank of India' },
-    { src: centralbankLogo, alt: 'Central Bank' },
+    { src: centralbankLogo, alt: 'Central Bank of India' },
     { src: statebankofindiaLogo, alt: 'State Bank of India' },
     { src: unionbankofindiaLogo, alt: 'Union Bank of India' },
+    { src: federalbankLogo, alt: 'Federal Bank' },
+    { src: dnyandeepLogo, alt: 'Dnyandeep Bank' },
+    { src: gsmahanagatLogo, alt: 'GS Mahanagat Bank' },
+    { src: ssbankLogo, alt: 'SS Bank' },
+    { src: baramatiLogo, alt: 'The Baramati Bank' },
+    { src: nationalLogo, alt: 'The National Bank' },
   ];
 
   return (
@@ -107,7 +125,7 @@ function HomePage() {
         <div className="main-content-container">
           <h2>Banks Served</h2>
           <p>Our senior advocate is also on the bank panel of several banks, including:</p>
-          <p>Bank of India, Central Bank of India, State Bank of India, Union Bank of India, Axis Bank, HDFC Bank, ICICI Bank, Punjab National Bank, Bank of Baroda, Canara Bank, and more...</p>
+          <p>Bank of India, Central Bank of India, State Bank of India, Union Bank of India, Federal Bank, Dnyandeep Bank, GS Mahanagat Bank, SS Bank, The Baramati Bank, The National Bank, Axis Bank, HDFC Bank, ICICI Bank, Punjab National Bank, Bank of Baroda, Canara Bank, and more...</p>
           <div className="bank-logos-marquee">
             <div className="marquee-content">
               {bankLogos.map((logo, index) => (
