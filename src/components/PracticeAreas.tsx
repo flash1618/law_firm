@@ -22,7 +22,7 @@ function PracticeAreas() {
             <li>Adoption & Guardianship</li>
           </ul>
           <div className="card-footer">
-            <span className="experience">18+ Years Experience</span>
+            <span className="experience">25+ Years Experience</span>
           </div>
         </div>
 
@@ -131,6 +131,14 @@ function PracticeAreas() {
             <h3>Mediation & Arbitration</h3>
             <p>Alternative dispute resolution services to resolve conflicts efficiently and cost-effectively.</p>
           </div>
+          <div className="service-item">
+            <h3>Drafting of Various Agreements</h3>
+            <p>Professional drafting of Sale Agreements, Resale Agreements, Development Agreements, Tripartite Agreements, Power of Attorney, and other legal documents tailored to your specific requirements.</p>
+          </div>
+          <div className="service-item">
+            <h3>Stamp Paper Services & Notary</h3>
+            <p>Comprehensive stamp paper services and notary assistance (outsourced). We handle drafting and execution of various affidavits required for routine legal matters such as Rent Agreements, Gap Affidavits, Name Change Affidavits, and more.</p>
+          </div>
         </div>
       </div>
 
@@ -155,7 +163,7 @@ function PracticeAreas() {
           <div className="feature-item">
             <div className="feature-icon">🏆</div>
             <h3>Proven Track Record</h3>
-            <p>Over 18 years of experience with thousands of successful cases and satisfied clients.</p>
+            <p>Over 25+ years of experience with thousands of successful cases and satisfied clients.</p>
           </div>
         </div>
       </div>

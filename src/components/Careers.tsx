@@ -46,7 +46,7 @@ function Careers() {
           <div className="career-details">
             <p><strong>Duration:</strong> 3-6 months</p>
             <p><strong>Location:</strong> Navi Mumbai, Maharashtra</p>
-            <p><strong>Type:</strong> Unpaid Internship</p>
+            <p><strong>Type:</strong> Paid Internship</p>
           </div>
           <div className="career-description">
             <p>We offer internship opportunities for law students who want to gain practical experience in a real legal practice environment.</p>

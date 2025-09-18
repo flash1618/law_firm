@@ -21,9 +21,7 @@ function ContactUs() {
                   Office No.1, 1st Floor, Sai Sharan CHS Complex, Sector – 8, Khanda Colony, Panvel, Navi Mumbai, Maharashtra – 410206
                 </p>
                 <div className="address-details">
-                  <p><strong>Landmark:</strong> Near Panvel Railway Station</p>
-                  <p><strong>Parking:</strong> Available</p>
-                  <p><strong>Accessibility:</strong> Ground floor accessible</p>
+                  <p><strong>Landmark:</strong> Opposite Axis Bank, Khanda Colony Branch</p>
                 </div>
               </div>
             </div>
@@ -104,7 +102,7 @@ function ContactUs() {
               </div>
               <div className="consultation-note">
                 <p><strong>Important:</strong> Consultations are by appointment only. Please call ahead to schedule your visit.</p>
-                <p><strong>Free Consultation:</strong> First 30 minutes consultation is free for new clients.</p>
+                <p><strong>Free Consultation:</strong> First 15 minutes consultation is free for new clients.</p>
               </div>
             </div>
           </div>

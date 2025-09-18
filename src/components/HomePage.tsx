@@ -61,6 +61,26 @@ function HomePage() {
         </div>
       </section>
 
+      <section className="consultation-section">
+        <div className="main-content-container">
+          <h2>Quick Legal Consultation</h2>
+          <div className="consultation-content">
+            <div className="consultation-info">
+              <h3>10 Minutes Consultation</h3>
+              <p><strong>Only on call</strong> - Don't hesitate and get your doubts cleared!</p>
+              <div className="contact-details">
+                <p><strong>Call:</strong> <a href="tel:+919322593358">+91 9322593358</a></p>
+                <p><strong>Email:</strong> <a href="mailto:adv.s.bondre@gmail.com">adv.s.bondre@gmail.com</a></p>
+                <p><strong>By Appointment Only</strong></p>
+              </div>
+            </div>
+            <div className="consultation-highlight">
+              <p><strong>First 15 minutes consultation is FREE for new clients!</strong></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="about-us-home-section">
         <div className="about-us-home-content main-content-container">
           <h2>About S.J. Bondre & Co.</h2>
@@ -68,11 +88,11 @@ function HomePage() {
                 Founded in 1996, S.J. Bondre & Co. is a Panvel-based law firm dedicated to providing practical, client-first legal solutions. We serve individuals and families across Maharashtra in areas such as Family Law, Property and Real Estate, Testamentary Law, Consumer Law, and more.
           </p>
           <p>
-            We combine experience with empathy, offering each client personalized attention and case-specific strategies for the best outcomes. With over 18 Years of service, our team continues to deliver efficient, cost-conscious, and result-oriented legal assistance.
+            We combine experience with empathy, offering each client personalized attention and case-specific strategies for the best outcomes. With over 25+ Years of service, our team continues to deliver efficient, cost-conscious, and result-oriented legal assistance.
           </p>
         </div>
         <div className="why-choose-us-home main-content-container">
-          <h2>Why Choose Us</h2>
+          <h2>Why Choose Us?</h2>
           <ul>
             <li><strong>Tailored Approach:</strong> Each case is unique. We design case-specific strategies for effective outcomes.</li>
             <li><strong>Personal Attention:</strong> Our clients are treated with utmost care, and their legal matters are handled like our own.</li>
@@ -88,7 +108,7 @@ function HomePage() {
           <h2>Our Success in Numbers</h2>
           <div className="metrics-grid">
             <div className="metric-card">
-              <h3>18+ Years</h3>
+              <h3>25+ Years</h3>
               <p>Experience</p>
             </div>
             <div className="metric-card">
@@ -106,8 +126,8 @@ function HomePage() {
       <section className="banks-served-section">
         <div className="main-content-container">
           <h2>Banks Served</h2>
-          <p>Our senior advocate is also on the bank panel of a few banks, including:</p>
-          <p>Bank Of India, Central Bank, State Bank of India, Union Bank of India and more...</p>
+          <p>Our senior advocate is also on the bank panel of several banks, including:</p>
+          <p>Bank of India, Central Bank of India, State Bank of India, Union Bank of India, Axis Bank, HDFC Bank, ICICI Bank, Punjab National Bank, Bank of Baroda, Canara Bank, and more...</p>
           <div className="bank-logos-marquee">
             <div className="marquee-content">
               {bankLogos.map((logo, index) => (
