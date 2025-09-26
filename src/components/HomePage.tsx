@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './HomePage.css';
-import bankofindiaLogo from '../assets/banks/Bank Of India.png';
+import bankofindiaLogo from '../assets/banks/Bank_Of_India.png';
 import centralbankLogo from '../assets/banks/centralbank.png';
 import statebankofindiaLogo from '../assets/banks/StateBankOfIndia.png';
 import unionbankofindiaLogo from '../assets/banks/union-bank-of-india.svg';
-import federalbankLogo from '../assets/banks/Federal Bank.png';
+import federalbankLogo from '../assets/banks/Federal_Bank.png';
 import dnyandeepLogo from '../assets/banks/Dnyandeep.jpg';
 import gsmahanagatLogo from '../assets/banks/GSMahanagat.jpg';
-import ssbankLogo from '../assets/banks/SS Bank.png';
+import ssbankLogo from '../assets/banks/SS_Bank.png';
 import baramatiLogo from '../assets/banks/theBaramati.jpg';
 import nationalLogo from '../assets/banks/TheNational.jpg';
 import justiceImage from '../assets/justice/justice2.png';
