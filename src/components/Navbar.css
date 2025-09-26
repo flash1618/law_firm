@@ -23,7 +23,8 @@
   transition: all 0.3s ease;
 }
 
-.navbar-brand:hover {
+.navbar-brand:hover,
+.navbar-brand.active {
   color: var(--accent-orange);
   transform: scale(1.05);
 }
@@ -127,11 +128,32 @@
   text-decoration: none;
   white-space: nowrap;
   transition: all 0.3s ease;
+  animation: phonePulse 2s ease-in-out infinite;
 }
 
 .contact-phone:hover {
   color: var(--accent-orange);
   transform: scale(1.05);
+}
+
+/* iPad/Tablet optimizations */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .navbar {
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.4em;
+    margin-right: 2rem;
+  }
+  
+  .navbar-nav {
+    gap: 1.5rem;
+  }
+  
+  .navbar-nav a {
+    font-size: 0.95em;
+  }
 }
 
 @media (max-width: 768px) {
@@ -221,6 +243,30 @@
 
   .contact-phone {
     font-size: 1.1em;
+  }
+}
+
+/* Phone number pulsating animation */
+@keyframes phonePulse {
+  0% {
+    transform: scale(1);
+    background: linear-gradient(45deg, var(--primary-navy), var(--accent-orange), var(--primary-navy));
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  50% {
+    transform: scale(1.05);
+    background-position: 100% 50%;
+    text-shadow: 0 0 10px rgba(204, 123, 87, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    background-position: 0% 50%;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
   }
 }
 

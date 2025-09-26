@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './HomePage.css';
-import bankofindiaLogo from '../assets/banks/BankOfIndia.png';
+import bankofindiaLogo from '../assets/banks/Bank Of India.png';
 import centralbankLogo from '../assets/banks/centralbank.png';
 import statebankofindiaLogo from '../assets/banks/StateBankOfIndia.png';
 import unionbankofindiaLogo from '../assets/banks/union-bank-of-india.svg';
-import federalbankLogo from '../assets/banks/FederakBank.png';
+import federalbankLogo from '../assets/banks/Federal Bank.png';
 import dnyandeepLogo from '../assets/banks/Dnyandeep.jpg';
 import gsmahanagatLogo from '../assets/banks/GSMahanagat.jpg';
-import ssbankLogo from '../assets/banks/SSBank.jpg';
+import ssbankLogo from '../assets/banks/SS Bank.png';
 import baramatiLogo from '../assets/banks/theBaramati.jpg';
 import nationalLogo from '../assets/banks/TheNational.jpg';
 import justiceImage from '../assets/justice/justice2.png';
@@ -72,8 +73,8 @@ function HomePage() {
             <h1>Experienced Advocates & Legal Consultants</h1>
             <p>S.J. Bondre & Co. | Navi Mumbai & Maharashtra - Providing practical, client-first legal solutions.</p>
             <div className="hero-buttons">
-              <button className="btn-primary">Book a Free Consultation</button>
-              <button className="btn-secondary">Our Services</button>
+              <Link to="/contact" className="btn-primary">Book a Free Consultation</Link>
+              <Link to="/practice-areas" className="btn-secondary">Our Services</Link>
             </div>
           </div>
         </div>
@@ -124,8 +125,8 @@ function HomePage() {
       <section className="banks-served-section">
         <div className="main-content-container">
           <h2>Banks Served</h2>
-          <p>Our senior advocate is also on the bank panel of several banks, including:</p>
-          <p>Bank of India, Central Bank of India, State Bank of India, Union Bank of India, Federal Bank, Dnyandeep Bank, GS Mahanagat Bank, SS Bank, The Baramati Bank, The National Bank, Axis Bank, HDFC Bank, ICICI Bank, Punjab National Bank, Bank of Baroda, Canara Bank, and more...</p>
+          <p className="banks-intro">We are also on the bank panel of several banks, including:</p>
+          <p className="banks-list">The Satara Sahakari Bank, The National Co-Operative Bank, Bank Of India, Dnyandeep Credit Society, Central Bank Of India, Union Bank Of India, GS Mahanagar Co-Operative Bank, The Baramati Sahakari Bank Ltd., Federal Bank, State Bank Of India, Reserve Bank Of India.</p>
           <div className="bank-logos-marquee">
             <div className="marquee-content">
               {bankLogos.map((logo, index) => (

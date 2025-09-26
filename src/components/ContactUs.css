@@ -1,7 +1,27 @@
 /* ContactUs.css */
+/* Override any global min-height constraints for this page */
+body:has(.contact-us-container) {
+  min-height: auto !important;
+  height: auto !important;
+}
+
 .contact-us-container {
-  padding: var(--section-padding);
+  padding: 6rem 2rem 0 2rem;
   background-color: var(--pure-white);
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: auto !important;
+  height: auto !important;
+  overflow: hidden;
+}
+
+/* Force the page to end exactly where content ends */
+.contact-us-container::after {
+  content: '';
+  display: block;
+  height: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .contact-header {
@@ -14,7 +34,7 @@
 
 .contact-header h1 {
   color: var(--primary-blue);
-  font-size: 3em;
+  font-size: 4em;
   margin-bottom: 1rem;
 }
 
@@ -28,19 +48,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 0;
 }
 
-.contact-info-section {
+.contact-left-column {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.contact-info-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+.contact-right-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-card {
@@ -69,27 +88,36 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.card-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
+/* Removed card-header styles - now using direct icon and h2 structure */
 
 .card-icon {
   font-size: 2.5em;
-  margin-right: 1rem;
+  margin-bottom: 1rem;
+  color: var(--accent-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.card-header h2 {
+.contact-card h2,
+.office-hours h2,
+.contact-form-card h2 {
   color: var(--primary-blue);
   font-size: 1.6em;
-  margin: 0;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
 }
 
 .card-content p {
   color: var(--dark-grey);
   line-height: 1.6;
   margin-bottom: 1rem;
+}
+
+/* Target only the description paragraph in contact form */
+.contact-form-card .card-content > p:first-child {
+  margin-bottom: 0.5rem !important;
+  margin-top: 0 !important;
 }
 
 .address-details,
@@ -109,14 +137,16 @@
 }
 
 .phone-list,
-.email-list {
+.email-list,
+.contact-list {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
 
 .phone-item,
-.email-item {
+.email-item,
+.contact-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -125,14 +155,17 @@
 }
 
 .phone-label,
-.email-label {
+.email-label,
+.contact-label {
   font-weight: 600;
   color: var(--primary-blue);
   font-size: 0.9em;
 }
 
 .phone-number,
-.email-address {
+.email-address,
+.contact-number,
+.contact-email {
   color: var(--secondary-blue);
   text-decoration: none;
   font-weight: 500;
@@ -140,8 +173,23 @@
 }
 
 .phone-number:hover,
-.email-address:hover {
+.email-address:hover,
+.contact-number:hover,
+.contact-email:hover {
   color: var(--accent-gold);
+}
+
+.address-link {
+  color: var(--secondary-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.address-link:hover {
+  color: var(--accent-gold);
+  text-decoration: underline;
 }
 
 .office-hours {
@@ -210,30 +258,31 @@
   color: var(--dark-grey);
 }
 
-.contact-form-section {
-  background-color: var(--light-grey);
-  padding: 2rem;
-  border-radius: 12px;
-}
 
 .contact-form-card {
   background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
   padding: 2rem;
-  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.contact-form-card h2 {
-  color: var(--primary-blue);
-  font-size: 2em;
-  margin-bottom: 1rem;
-  text-align: center;
+.contact-form-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--accent-gold));
 }
 
-.contact-form-card p {
-  color: var(--dark-grey);
-  text-align: center;
-  margin-bottom: 2rem;
+.contact-form-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form {
@@ -242,15 +291,25 @@
   gap: 1.5rem;
 }
 
+.contact-form p {
+  margin-bottom: 1rem;
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-row .form-group {
+  margin-bottom: 0;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1.5rem;
 }
 
 .form-group label {
@@ -307,8 +366,8 @@
 }
 
 .btn-submit {
-  background-color: var(--accent-gold);
-  color: var(--primary-blue);
+  background: linear-gradient(135deg, var(--accent-orange) 0%, #ff8c42 100%);
+  color: var(--pure-white);
   padding: 1rem 2rem;
   border: none;
   border-radius: 5px;
@@ -321,58 +380,27 @@
 }
 
 .btn-submit:hover {
-  background-color: #d97706;
+  background: linear-gradient(135deg, #ff8c42 0%, var(--accent-orange) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 4px 15px rgba(204, 123, 87, 0.4);
 }
 
-.map-section {
-  margin-bottom: 4rem;
-}
-
-.map-section h2 {
-  color: var(--primary-blue);
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2.5em;
-}
-
-.map-container {
-  background-color: var(--light-grey);
-  border-radius: 12px;
-  padding: 2rem;
-  text-align: center;
-}
-
-.map-placeholder {
-  background-color: white;
-  padding: 3rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.map-icon {
-  font-size: 4em;
-  margin-bottom: 1rem;
-}
-
-.map-placeholder p {
-  color: var(--dark-grey);
-  margin: 0.5rem 0;
-}
 
 .emergency-contact {
   background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
   color: white;
-  padding: 3rem 2rem;
+  padding: 3rem 2rem 2rem 2rem;
   border-radius: 12px;
   text-align: center;
+  margin-bottom: -10rem;
+  position: relative;
+  z-index: 10;
 }
 
 .emergency-contact h2 {
   color: var(--accent-gold);
   margin-bottom: 1.5rem;
-  font-size: 2.5em;
+  font-size: 2.2em;
 }
 
 .emergency-content p {
@@ -412,6 +440,7 @@
   color: white;
 }
 
+/* Mobile optimizations */
 @media (max-width: 768px) {
   .contact-us-container {
     padding: var(--mobile-section-padding);
@@ -431,21 +460,13 @@
     gap: 2.5rem;
   }
 
-  .contact-info-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
 
   .contact-card {
     padding: 1.5rem;
     margin-bottom: 1rem;
   }
 
-  .card-header {
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
+  /* Removed card-header mobile styles */
 
   .card-icon {
     font-size: 2em;
@@ -453,17 +474,21 @@
     margin-bottom: 0.5rem;
   }
 
-  .card-header h2 {
+  .contact-card h2,
+  .office-hours h2,
+  .contact-form-card h2 {
     font-size: 1.4em;
   }
 
   .phone-list,
-  .email-list {
+  .email-list,
+  .contact-list {
     gap: 1rem;
   }
 
   .phone-item,
-  .email-item {
+  .email-item,
+  .contact-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
@@ -471,12 +496,15 @@
   }
 
   .phone-label,
-  .email-label {
+  .email-label,
+  .contact-label {
     font-size: 0.9em;
   }
 
   .phone-number,
-  .email-address {
+  .email-address,
+  .contact-number,
+  .contact-email {
     font-size: 1.1em;
     word-break: break-all;
   }
@@ -552,21 +580,7 @@
     min-height: var(--touch-target-min);
   }
 
-  .map-section h2 {
-    font-size: 1.8em;
-  }
 
-  .map-container {
-    padding: 1.5rem;
-  }
-
-  .map-placeholder {
-    padding: 2rem 1rem;
-  }
-
-  .map-icon {
-    font-size: 3em;
-  }
 
   .emergency-contact {
     padding: 2rem 1.5rem;
@@ -601,13 +615,14 @@
     padding: 1rem;
   }
 
-  .card-header h2 {
+  .contact-card h2,
+  .office-hours h2,
+  .contact-form-card h2 {
     font-size: 1.2em;
   }
 
   .office-hours h2,
   .contact-form-card h2,
-  .map-section h2,
   .emergency-contact h2 {
     font-size: 1.5em;
   }

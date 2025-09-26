@@ -50,12 +50,6 @@
   filter: contrast(1.4) brightness(1.3) saturate(1.2);
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px) translateX(0px); }
-  25% { transform: translateY(-10px) translateX(5px); }
-  50% { transform: translateY(-5px) translateX(-5px); }
-  75% { transform: translateY(-15px) translateX(3px); }
-}
 
 
 .hero-content {
@@ -86,7 +80,7 @@
 
 .hero-content h1 {
   color: var(--pure-white);
-  font-size: 5em;
+  font-size: 4.5em;
   margin-bottom: 1rem;
   font-weight: 700;
   text-align: left;
@@ -103,11 +97,6 @@
   transform: translateX(0);
 }
 
-@keyframes shimmer {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 
 .hero-content h1::after {
   content: '';
@@ -117,48 +106,26 @@
   width: 120px;
   height: 5px;
   background: linear-gradient(90deg, var(--accent-orange), var(--texture-brown));
-  /* Animation removed */
   border-radius: 3px;
 }
 
 .hero-content p {
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin-bottom: 2.5rem;
   color: rgba(255, 255, 255, 0.95);
   text-align: left;
   max-width: 700px;
   line-height: 1.6;
-  /* Animation removed */
   font-weight: 400;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes expandWidth {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100px;
-  }
-}
 
 .hero-buttons {
   display: flex;
   gap: 1rem;
   justify-content: flex-start;
   flex-wrap: wrap;
-  /* Animation removed */
 }
 
 /* About Us Home Section */
@@ -175,18 +142,13 @@
   overflow: hidden;
 }
 
-/* Removed translucent background box */
 
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
 
 .about-us-home-content h2,
 .why-choose-us-home h2 {
   color: var(--primary-navy);
   margin-bottom: 2rem;
-  font-size: 3.5em;
+  font-size: 2.2em;
   position: relative;
   z-index: 1;
   animation: slideInUp 1s ease-out;
@@ -253,7 +215,7 @@
   padding: 2.5rem;
   margin-bottom: 1.5rem;
   border-left: 5px solid var(--accent-orange);
-  border-radius: var(--border-radius);
+  border-radius: 6px;
   box-shadow: var(--shadow-light);
   font-size: 1.2em;
   color: var(--text-dark);
@@ -321,10 +283,11 @@
   z-index: 0;
 }
 
+
 .success-metrics-section h2 {
   color: white;
   margin-bottom: 4rem;
-  font-size: 3.5em;
+  font-size: 2.2em;
   position: relative;
   z-index: 1;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
@@ -351,26 +314,17 @@
 }
 
 .metric-card {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   padding: 3rem 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-heavy);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--accent-orange);
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   z-index: 1;
-  animation: slideInUp 0.8s ease-out, fadeIn 1s ease-out;
-  transform: translateY(30px);
-  opacity: 0;
-  animation-fill-mode: forwards;
 }
-
-.metric-card:nth-child(1) { animation-delay: 0.1s; }
-.metric-card:nth-child(2) { animation-delay: 0.2s; }
-.metric-card:nth-child(3) { animation-delay: 0.3s; }
-.metric-card:nth-child(4) { animation-delay: 0.4s; }
 
 .metric-card::before {
   content: '';
@@ -384,30 +338,34 @@
   transition: transform 0.4s ease;
 }
 
-/* Hover effects are now permanent - no additional hover needed */
-
 .metric-card h3 {
   color: white;
   font-size: 2.5em;
   margin-bottom: 0.5rem;
-  animation: pulse 2s ease-in-out infinite;
+  font-weight: 700;
+  animation: textPulse 2s ease-in-out infinite;
 }
 
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+@keyframes textPulse {
+  0%, 100% { 
+    transform: scale(1);
+  }
+  50% { 
+    transform: scale(1.05);
+  }
 }
 
 .metric-card p {
-  font-size: 1.2em;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
 }
 
 /* Banks Served Section */
 .banks-served-section {
-  padding: var(--section-padding);
+  padding: 2rem 2rem 6rem 2rem;
   text-align: center;
-  margin: 6rem 0;
+  margin: 0 auto 6rem auto;
   position: relative;
   overflow: hidden;
 }
@@ -416,8 +374,8 @@
 
 .banks-served-section h2 {
   color: var(--primary-navy);
-  margin-bottom: 2rem;
-  font-size: 3.5em;
+  margin-bottom: 2.5rem;
+  font-size: 2.2em;
   position: relative;
   z-index: 1;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
@@ -448,6 +406,29 @@
   font-weight: 400;
 }
 
+.banks-intro {
+  margin-bottom: 0.5rem !important;
+}
+
+.banks-list {
+  margin-bottom: 1rem !important;
+}
+
+
+.rbi-note {
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--accent-orange) 0%, var(--texture-brown) 100%);
+  color: var(--pure-white);
+  border-radius: 6px;
+  font-size: 1.1em;
+  box-shadow: var(--shadow-medium);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .bank-logos-marquee {
   overflow: hidden;
   white-space: nowrap;
@@ -458,14 +439,14 @@
 
 .marquee-content {
   display: inline-block;
-  animation: scroll-left 20s linear infinite;
+  animation: scroll-left 35s linear infinite;
 }
 
 .bank-logo {
-  height: 60px; /* Adjust as needed */
-  margin: 0 2rem;
+  height: 80px; /* Increased size for better visibility */
+  margin: 0 2.5rem;
   vertical-align: middle;
-  opacity: 0.7;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
@@ -479,12 +460,12 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-orange) 0%, var(--texture-brown) 100%);
+  background: linear-gradient(135deg, var(--accent-orange) 0%, #ff8c42 100%);
   color: var(--pure-white);
-  padding: 1.2em 3em;
+  padding: 0.8em 2em;
   border: none;
-  border-radius: var(--border-radius);
-  font-size: 1.2em;
+  border-radius: 6px;
+  font-size: 1.1em;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -518,10 +499,10 @@
 .btn-secondary {
   background-color: transparent;
   color: var(--pure-white);
-  padding: 1.2em 3em;
+  padding: 0.8em 2em;
   border: 2px solid var(--pure-white);
-  border-radius: var(--border-radius);
-  font-size: 1.2em;
+  border-radius: 6px;
+  font-size: 1.1em;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -553,6 +534,39 @@
 
 .btn-secondary:hover::before {
   width: 100%;
+}
+
+/* iPad/Tablet optimizations */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-content {
+    max-width: 70%;
+    width: 70%;
+    padding: 4rem 2rem 4rem 4rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 4em;
+  }
+  
+  .hero-content p {
+    font-size: 1.3em;
+  }
+  
+  .about-us-home-content h2,
+  .why-choose-us-home h2 {
+    font-size: 3em;
+  }
+  
+  .success-metrics-section h2,
+  .banks-served-section h2 {
+    font-size: 3em;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
 }
 
 @media (max-width: 768px) {
@@ -690,13 +704,20 @@
     font-size: 1em;
   }
 
+
+  .rbi-note {
+    font-size: 1em;
+    padding: 0.8rem 1.5rem;
+    margin: 1.5rem 0 1rem 0;
+  }
+
   .bank-logo {
-    height: 45px;
-    margin: 0 1.5rem;
+    height: 60px;
+    margin: 0 2rem;
   }
 
   .marquee-content {
-    animation-duration: 25s; /* Slower on mobile for better readability */
+    animation-duration: 40s; /* Slower on mobile for better readability */
   }
 }
 
@@ -733,7 +754,8 @@
   }
 
   .bank-logo {
-    height: 35px;
-    margin: 0 1rem;
+    height: 50px;
+    margin: 0 1.5rem;
   }
+
 }

@@ -16,17 +16,17 @@
 .disclaimer-modal {
   background-color: #f5f5f5;
   border-radius: 8px;
-  padding: 2rem;
+  padding: 1.5rem;
   max-width: 600px;
   width: 100%;
-  max-height: 80vh;
+  max-height: 85vh;
   overflow-y: auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
 .disclaimer-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .disclaimer-header h2 {
@@ -38,7 +38,7 @@
 }
 
 .disclaimer-content {
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .disclaimer-content p {

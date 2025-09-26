@@ -12,6 +12,7 @@ function DisclaimerModal() {
 
   const handleAccept = () => {
     setIsAccepted(true);
+
     sessionStorage.setItem('disclaimerAccepted', 'true');
     setIsVisible(false);
     

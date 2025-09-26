@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { Users, Home, FileText, Scale, CreditCard, Building } from 'lucide-react';
 import './PracticeAreas.css';
 
 function PracticeAreas() {
@@ -10,7 +12,7 @@ function PracticeAreas() {
 
       <div className="practice-areas-grid">
         <div className="practice-area-card">
-          <div className="card-icon">👨‍👩‍👧‍👦</div>
+          <div className="card-icon"><Users size={32} /></div>
           <h2>Family Law</h2>
           <p className="card-description">Expert guidance through complex family matters with compassion and legal expertise.</p>
           <ul>
@@ -27,7 +29,7 @@ function PracticeAreas() {
         </div>
 
         <div className="practice-area-card">
-          <div className="card-icon">🏠</div>
+          <div className="card-icon"><Home size={32} /></div>
           <h2>Property & Real Estate Law</h2>
           <p className="card-description">Secure your property investments with our comprehensive real estate legal services.</p>
           <ul>
@@ -44,7 +46,7 @@ function PracticeAreas() {
         </div>
 
         <div className="practice-area-card">
-          <div className="card-icon">📜</div>
+          <div className="card-icon"><FileText size={32} /></div>
           <h2>Testamentary & Intestate Law</h2>
           <p className="card-description">Ensure your legacy is protected with proper estate planning and succession matters.</p>
           <ul>
@@ -61,7 +63,7 @@ function PracticeAreas() {
         </div>
 
         <div className="practice-area-card">
-          <div className="card-icon">⚖️</div>
+          <div className="card-icon"><Scale size={32} /></div>
           <h2>Consumer Protection Law</h2>
           <p className="card-description">Protect your consumer rights and seek justice for unfair trade practices.</p>
           <ul>
@@ -78,7 +80,7 @@ function PracticeAreas() {
         </div>
 
         <div className="practice-area-card">
-          <div className="card-icon">💳</div>
+          <div className="card-icon"><CreditCard size={32} /></div>
           <h2>Cheque Bounce Cases</h2>
           <p className="card-description">Expert representation in Negotiable Instruments Act cases with proven track record.</p>
           <ul>
@@ -95,7 +97,7 @@ function PracticeAreas() {
         </div>
 
         <div className="practice-area-card">
-          <div className="card-icon">🏢</div>
+          <div className="card-icon"><Building size={32} /></div>
           <h2>Co-operative Housing Society Law</h2>
           <p className="card-description">Navigate complex society laws and regulations with our specialized expertise.</p>
           <ul>
@@ -128,8 +130,8 @@ function PracticeAreas() {
             <p>Experienced representation in various courts across Mumbai, Navi Mumbai, and Maharashtra.</p>
           </div>
           <div className="service-item">
-            <h3>Mediation & Arbitration</h3>
-            <p>Alternative dispute resolution services to resolve conflicts efficiently and cost-effectively.</p>
+            <h3>Client Counselling</h3>
+            <p>Comprehensive legal counselling and guidance to help you understand your rights, options, and the best course of action for your legal matters.</p>
           </div>
           <div className="service-item">
             <h3>Drafting of Various Agreements</h3>
@@ -137,7 +139,7 @@ function PracticeAreas() {
           </div>
           <div className="service-item">
             <h3>Stamp Paper Services & Notary</h3>
-            <p>Comprehensive stamp paper services and notary assistance (outsourced). We handle drafting and execution of various affidavits required for routine legal matters such as Rent Agreements, Gap Affidavits, Name Change Affidavits, and more.</p>
+            <p>Comprehensive stamp paper services and notary assistance (notary outsourced). We handle drafting and execution of various affidavits required for routine legal matters such as Rent Agreements, Gap Affidavits, Name Change Affidavits, and more.</p>
           </div>
         </div>
       </div>
@@ -170,20 +172,12 @@ function PracticeAreas() {
 
       <div className="cta-section">
         <h2>Need Legal Assistance?</h2>
-        <div className="consultation-details">
-          <h3>10 Minutes Consultation</h3>
-          <p><strong>Only on call</strong> - Don't hesitate and get your doubts cleared!</p>
-          <div className="contact-info">
-            <p><strong>Call:</strong> <a href="tel:+919322593358">+91 9322593358</a></p>
-            <p><strong>Email:</strong> <a href="mailto:adv.s.bondre@gmail.com">adv.s.bondre@gmail.com</a></p>
-            <p><strong>By Appointment Only</strong></p>
-            <p className="free-consultation"><strong>First 15 minutes consultation is FREE for new clients!</strong></p>
-          </div>
-        </div>
-        <div className="cta-buttons">
-          <button className="btn-primary">Book Free Consultation</button>
-          <button className="btn-secondary">Call Now: +91 9322593358</button>
-        </div>
+        <h3>10 Minutes Consultation</h3>
+        <p><strong>Only on call</strong> - Don't hesitate and get your doubts cleared!</p>
+        <p><strong>Call:</strong> <a href="tel:+919322593358">+91 9322593358</a></p>
+        <p><strong>Email:</strong> <a href="mailto:adv.s.bondre@gmail.com">adv.s.bondre@gmail.com</a></p>
+        <p><strong>By Appointment Only</strong></p>
+        <Link to="/contact" className="free-consultation"><strong>First 10 minutes consultation is FREE for new clients!</strong></Link>
       </div>
     </div>
   );

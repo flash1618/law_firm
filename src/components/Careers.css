@@ -1,19 +1,60 @@
+body:has(.careers-container) {
+  min-height: auto !important;
+  height: auto !important;
+}
+
+/* Override App component min-height for careers page */
+.App:has(.careers-container) {
+  min-height: auto !important;
+  height: auto !important;
+}
+
+/* Override root element */
+#root:has(.careers-container) {
+  min-height: auto !important;
+  height: auto !important;
+}
+
+/* Override html element */
+html:has(.careers-container) {
+  min-height: auto !important;
+  height: auto !important;
+}
+
+/* Nuclear option - force all elements to have auto height */
+html:has(.careers-container) * {
+  min-height: auto !important;
+}
+
 .careers-container {
-  padding: var(--section-padding);
+  padding: 6rem 2rem 4rem 2rem;
   background-color: var(--pure-white);
-  color: var(--dark-grey);
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: auto !important;
+  height: auto !important;
+  overflow: hidden;
+}
+
+/* Force the page to end exactly where content ends */
+.careers-container::after {
+  content: '';
+  display: block;
+  height: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .careers-container h1 {
   color: var(--primary-blue);
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 3em;
+  font-size: 4em;
 }
 
 .careers-intro {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 0.5rem;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -29,7 +70,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 0.5rem;
 }
 
 .career-card {
@@ -39,6 +80,9 @@
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
 }
 
 .career-card:hover {
@@ -59,11 +103,85 @@
   padding: 1rem;
   border-radius: 5px;
   margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
 .career-details p {
   margin: 0.5rem 0;
   font-weight: 500;
+}
+
+.read-more {
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+}
+
+.read-more p {
+  color: var(--accent-orange);
+  font-weight: 600;
+  font-size: 1em;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.read-more p:hover {
+  color: var(--primary-navy);
+}
+
+.career-card .btn-primary {
+  margin-top: auto;
+  align-self: center;
+  background: none !important;
+  border: none !important;
+  color: var(--text-dark) !important;
+  font-size: 1em !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+
+.career-card .btn-primary:hover {
+  color: var(--text-dark) !important;
+  background: linear-gradient(135deg, var(--accent-orange) 0%, #ff8c42 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(204, 123, 87, 0.3) !important;
+  padding: 0.75rem 2rem !important;
+  border-radius: 6px !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.career-card .read-more {
+  margin-top: auto;
+}
+
+.career-description {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+    transform: translateY(0);
+  }
 }
 
 .career-description h4 {
@@ -107,14 +225,14 @@
   background-color: var(--light-grey);
   padding: 3rem 2rem;
   border-radius: 8px;
-  margin-bottom: 4rem;
+  margin-bottom: 0.5rem;
 }
 
 .careers-benefits h2 {
   color: var(--primary-blue);
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 2.5em;
+  font-size: 2.2em;
 }
 
 .benefits-grid {
@@ -140,14 +258,14 @@
 }
 
 .application-process {
-  margin-bottom: 4rem;
+  margin-bottom: 0;
 }
 
 .application-process h2 {
   color: var(--primary-blue);
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 2.5em;
+  font-size: 2.2em;
 }
 
 .process-steps {
@@ -190,9 +308,12 @@
 .careers-contact {
   background-color: var(--primary-blue);
   color: white;
-  padding: 3rem 2rem;
+  padding: 1rem 2rem 0 2rem;
   border-radius: 8px;
   text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .careers-contact h2 {
@@ -210,6 +331,10 @@
 .contact-info p {
   margin: 0.5rem 0;
   font-size: 1.1em;
+}
+
+.contact-info p:last-child {
+  margin-bottom: 0 !important;
 }
 
 .contact-info strong {
@@ -234,7 +359,7 @@
   .careers-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 0.75rem;
   }
 
   .career-card {
@@ -278,7 +403,7 @@
 
   .careers-benefits {
     padding: 2rem 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 0.75rem;
   }
 
   .careers-benefits h2 {
@@ -305,7 +430,7 @@
   }
 
   .application-process {
-    margin-bottom: 3rem;
+    margin-bottom: 0.5rem;
   }
 
   .application-process h2 {
@@ -339,7 +464,7 @@
   }
 
   .careers-contact {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem 0 1.5rem;
   }
 
   .careers-contact h2 {

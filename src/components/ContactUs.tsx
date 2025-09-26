@@ -1,89 +1,126 @@
+import { useState } from 'react';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import './ContactUs.css';
 
 function ContactUs() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    practiceArea: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    try {
+      // Use Web3Forms (free service) for direct email sending
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '3a4e2c71-6670-4565-a0ac-6a03597c0e46',
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone || 'Not provided',
+          practice_area: formData.practiceArea || 'Not specified',
+          subject: formData.subject,
+          message: formData.message,
+          to: 'hiitssnehal@gmail.com',
+          from_name: 'S.J. Bondre & Co. Contact Form'
+        })
+      });
+
+      const result = await response.json();
+      
+      if (result.success) {
+        // Show success message
+        alert('Message sent successfully! We\'ll get back to you soon.');
+        
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          practiceArea: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
+      
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Sorry, there was an error sending your message. Please try again or contact us directly.');
+    }
+  };
   return (
-    <div className="contact-us-container main-content-container">
+    <div className="contact-us-container">
       <div className="contact-header">
         <h1>Contact S.J. Bondre & Co.</h1>
-        <p>Get in touch with us for expert legal consultation and representation. We're here to help you with all your legal needs.</p>
+        <p>Get in touch with us for expert legal consultation and representation. We are here to help you with all your legal needs.</p>
       </div>
 
       <div className="contact-main-content">
-        <div className="contact-info-section">
-          <div className="contact-info-grid">
-            <div className="contact-card">
-              <div className="card-header">
-                <div className="card-icon">📍</div>
-                <h2>Office Address</h2>
-              </div>
-              <div className="card-content">
-                <p>
-                  Office No.1, 1st Floor, Sai Sharan CHS Complex, Sector – 8, Khanda Colony, Panvel, Navi Mumbai, Maharashtra – 410206
-                </p>
-                <div className="address-details">
-                  <p><strong>Landmark:</strong> Opposite Axis Bank, Khanda Colony Branch</p>
+        <div className="contact-left-column">
+          <div className="contact-card">
+            <div className="card-icon"><Phone size={32} /></div>
+            <h2>Contact</h2>
+            <div className="card-content">
+              <div className="contact-list">
+                <div className="contact-item">
+                  <span className="contact-label">Call:</span>
+                  <a href="tel:+919322593358" className="contact-number">+91 9322593358</a>
                 </div>
-              </div>
-            </div>
-
-            <div className="contact-card">
-              <div className="card-header">
-                <div className="card-icon">📞</div>
-                <h2>Phone Numbers</h2>
-              </div>
-              <div className="card-content">
-                <div className="phone-list">
-                  <div className="phone-item">
-                    <span className="phone-label">Landline:</span>
-                    <a href="tel:+02227464546" className="phone-number">022-27464546</a>
-                  </div>
-                  <div className="phone-item">
-                    <span className="phone-label">Mobile:</span>
-                    <a href="tel:+919322593358" className="phone-number">+91 9322593358</a>
-                  </div>
-                  <div className="phone-item">
-                    <span className="phone-label">Mobile:</span>
-                    <a href="tel:+919870889919" className="phone-number">9870889919</a>
-                  </div>
-                  <div className="phone-item">
-                    <span className="phone-label">Mobile:</span>
-                    <a href="tel:+919372680574" className="phone-number">9372680574</a>
-                  </div>
+                <div className="contact-item">
+                  <span className="contact-label">WhatsApp:</span>
+                  <a href="https://wa.me/919322593358" className="contact-number">+91 9322593358</a>
                 </div>
-                <div className="call-note">
-                  <p><strong>Note:</strong> Available 24/7 for urgent legal matters</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="contact-card">
-              <div className="card-header">
-                <div className="card-icon">✉️</div>
-                <h2>Email Addresses</h2>
-              </div>
-              <div className="card-content">
-                <div className="email-list">
-                  <div className="email-item">
-                    <span className="email-label">Primary:</span>
-                    <a href="mailto:adv.s.bondre@gmail.com" className="email-address">adv.s.bondre@gmail.com</a>
-                  </div>
-                  <div className="email-item">
-                    <span className="email-label">General:</span>
-                    <a href="mailto:pra3nalgae@gmail.com" className="email-address">pra3nalgae@gmail.com</a>
-                  </div>
-                  <div className="email-item">
-                    <span className="email-label">Support:</span>
-                    <a href="mailto:bondrepranjal224@gmail.com" className="email-address">bondrepranjal224@gmail.com</a>
-                  </div>
-                </div>
-                <div className="email-note">
-                  <p><strong>Response Time:</strong> Within 24 hours</p>
+                <div className="contact-item">
+                  <span className="contact-label">Email:</span>
+                  <a href="mailto:adv.s.bondre@gmail.com" className="contact-email">adv.s.bondre@gmail.com</a>
                 </div>
               </div>
             </div>
           </div>
 
+          <div className="contact-card">
+            <div className="card-icon"><MapPin size={32} /></div>
+            <h2>Office Address</h2>
+            <div className="card-content">
+              <p>
+                <a 
+                  href="https://www.google.com/maps/place/S.+J.+Bondre/@19.0063127,73.1074202,17z/data=!3m2!4b1!5s0x3be7e849b2f6ec01:0x4b246da7b0760d10!4m6!3m5!1s0x3be7e944b18d1d7d:0x5ab6457c741303a1!8m2!3d19.0063127!4d73.1099951!16s%2Fg%2F11f9zf2tht?entry=ttu&g_ep=EgoyMDI1MDkyMy4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="address-link"
+                >
+                  Office No.1, 1st Floor, Sai Sharan CHS Complex, Sector – 8, Khanda Colony, Panvel, Navi Mumbai, Maharashtra – 410206
+                </a>
+              </p>
+              <div className="address-details">
+                <p><strong>Landmark:</strong> Opposite Axis Bank, Khanda Colony Branch</p>
+              </div>
+            </div>
+          </div>
+
           <div className="office-hours">
+            <div className="card-icon"><Clock size={32} /></div>
             <h2>Office Hours & Consultation</h2>
             <div className="hours-content">
               <div className="hours-grid">
@@ -102,81 +139,119 @@ function ContactUs() {
               </div>
               <div className="consultation-note">
                 <p><strong>Important:</strong> Consultations are by appointment only. Please call ahead to schedule your visit.</p>
-                <p><strong>Free Consultation:</strong> First 15 minutes consultation is free for new clients.</p>
+                <p><strong>Free Consultation:</strong> First 10 minutes consultation is free for new clients.</p>
+                <p><strong>Stamp Paper:</strong> Not available on Saturday and Sunday.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="contact-form-section">
+        <div className="contact-right-column">
           <div className="contact-form-card">
+            <div className="card-icon"><Mail size={32} /></div>
             <h2>Send Us a Message</h2>
-            <p>Fill out the form below and we'll get back to you as soon as possible.</p>
-            <form className="contact-form">
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="firstName">First Name *</label>
-                  <input type="text" id="firstName" name="firstName" required />
+            <div className="card-content">
+              <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+              <br />
+              <form className="contact-form" onSubmit={handleSubmit}>
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="firstName">First Name *</label>
+                    <input 
+                      type="text" 
+                      id="firstName" 
+                      name="firstName" 
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      required 
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="lastName">Last Name *</label>
+                    <input 
+                      type="text" 
+                      id="lastName" 
+                      name="lastName" 
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      required 
+                    />
+                  </div>
+                </div>
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="email">Email *</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required 
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="phone">Phone</label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      name="phone" 
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                    />
+                  </div>
                 </div>
                 <div className="form-group">
-                  <label htmlFor="lastName">Last Name *</label>
-                  <input type="text" id="lastName" name="lastName" required />
+                  <label htmlFor="practiceArea">Practice Area</label>
+                  <select 
+                    id="practiceArea" 
+                    name="practiceArea" 
+                    value={formData.practiceArea}
+                    onChange={handleInputChange}
+                  >
+                    <option value="">Select a practice area</option>
+                    <option value="Family Law">Family Law</option>
+                    <option value="Property and Real Estate">Property and Real Estate</option>
+                    <option value="Testamentary Law">Testamentary Law</option>
+                    <option value="Consumer Law">Consumer Law</option>
+                    <option value="Civil Litigation">Civil Litigation</option>
+                    <option value="Criminal Law">Criminal Law</option>
+                    <option value="Corporate Law">Corporate Law</option>
+                    <option value="Labour and Employment Law">Labour and Employment Law</option>
+                    <option value="Banking and Finance Law">Banking and Finance Law</option>
+                    <option value="Stamp Paper Services & Notary">Stamp Paper Services & Notary</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
-              </div>
-              <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="email">Email Address *</label>
-                  <input type="email" id="email" name="email" required />
+                  <label htmlFor="subject">Subject *</label>
+                  <input 
+                    type="text" 
+                    id="subject" 
+                    name="subject" 
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    required 
+                  />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="phone">Phone Number *</label>
-                  <input type="tel" id="phone" name="phone" required />
+                  <label htmlFor="message">Message *</label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    rows={5} 
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                  ></textarea>
                 </div>
-              </div>
-              <div className="form-group">
-                <label htmlFor="subject">Subject *</label>
-                <input type="text" id="subject" name="subject" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="practiceArea">Practice Area</label>
-                <select id="practiceArea" name="practiceArea">
-                  <option value="">Select a practice area</option>
-                  <option value="family-law">Family Law</option>
-                  <option value="property-law">Property & Real Estate Law</option>
-                  <option value="testamentary-law">Testamentary & Intestate Law</option>
-                  <option value="consumer-law">Consumer Protection Law</option>
-                  <option value="cheque-bounce">Cheque Bounce Cases</option>
-                  <option value="society-law">Co-operative Housing Society Law</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Message *</label>
-                <textarea id="message" name="message" rows={5} required placeholder="Please describe your legal matter in detail..."></textarea>
-              </div>
-              <div className="form-group checkbox-group">
-                <label className="checkbox-label">
-                  <input type="checkbox" name="privacy" required />
-                  <span className="checkmark"></span>
-                  I agree to the <a href="/policies" target="_blank">Privacy Policy</a> and <a href="/policies" target="_blank">Terms of Service</a>
-                </label>
-              </div>
-              <button type="submit" className="btn-submit">Send Message</button>
-            </form>
+                <button type="submit" className="btn-primary">Send Message</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="map-section">
-        <h2>Find Us</h2>
-        <div className="map-container">
-          <div className="map-placeholder">
-            <div className="map-icon">🗺️</div>
-            <p>Interactive Map Coming Soon</p>
-            <p>Office Location: Panvel, Navi Mumbai, Maharashtra</p>
-          </div>
-        </div>
-      </div>
 
       <div className="emergency-contact">
         <h2>Emergency Legal Assistance</h2>

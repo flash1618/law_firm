@@ -9,6 +9,7 @@
 .testimonials-container h1 {
   margin-bottom: 3rem;
   color: var(--primary-blue);
+  font-size: 4em;
 }
 
 .testimonial-grid {
@@ -27,6 +28,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.star-rating {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 1rem;
+  color: #fbbf24;
 }
 
 .testimonial-card p {
@@ -116,7 +124,7 @@
 
 .google-reviews-section {
   padding: 3rem 2rem;
-  background-color: var(--light-grey);
+  background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   max-width: 800px;

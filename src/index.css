@@ -32,11 +32,13 @@ body {
   font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url('/src/assets/back/Untitled%20design%20(6).png');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: 
+    linear-gradient(45deg, transparent 24%, rgba(17, 41, 78, 0.03) 25%, rgba(17, 41, 78, 0.03) 26%, transparent 27%, transparent 74%, rgba(17, 41, 78, 0.03) 75%, rgba(17, 41, 78, 0.03) 76%, transparent 77%),
+    linear-gradient(-45deg, transparent 24%, rgba(17, 41, 78, 0.02) 25%, rgba(17, 41, 78, 0.02) 26%, transparent 27%, transparent 74%, rgba(17, 41, 78, 0.02) 75%, rgba(17, 41, 78, 0.02) 76%, transparent 77%),
+    linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background-size: 60px 60px, 60px 60px, 100% 100%;
+  background-position: 0 0, 0 0, 0 0;
   background-attachment: fixed;
-  background-position: center;
   color: var(--text-dark);
   line-height: 1.6;
 }
@@ -59,17 +61,11 @@ h1 {
 }
 
 h2 {
-  font-size: 3em;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
-
-h2 {
   font-size: 2.2em;
   font-weight: 700;
   line-height: 1.3;
   margin-bottom: 0.6em;
+  letter-spacing: -0.02em;
 }
 
 h3 {
@@ -105,20 +101,30 @@ button {
   background: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-}
 
 /* Mobile-first responsive design */
 @media (max-width: 1200px) {
   .main-content-container {
     padding: 0 1.5rem;
+  }
+}
+
+/* iPad/Tablet optimizations */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .main-content-container {
+    padding: 0 2rem;
+  }
+  
+  h1 {
+    font-size: 3.5em;
+  }
+  
+  h2 {
+    font-size: 2.5em;
+  }
+  
+  h3 {
+    font-size: 1.6em;
   }
 }
 
