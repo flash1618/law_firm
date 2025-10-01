@@ -111,7 +111,7 @@ function HomePage() {
               <p>Experience</p>
             </div>
             <div className="metric-card">
-              <h3>5000+ Cases</h3>
+              <h3>1000+ Cases</h3>
               <p>Successfully Handled</p>
             </div>
             <div className="metric-card">
@@ -125,7 +125,6 @@ function HomePage() {
       <section className="banks-served-section">
         <div className="main-content-container">
           <h2>Banks Served</h2>
-          <p className="banks-intro">We are also on the bank panel of several banks, including:</p>
           <p className="banks-list">The Satara Sahakari Bank, The National Co-Operative Bank, Bank Of India, Dnyandeep Credit Society, Central Bank Of India, Union Bank Of India, GS Mahanagar Co-Operative Bank, The Baramati Sahakari Bank Ltd., Federal Bank, State Bank Of India, Reserve Bank Of India.</p>
           <div className="bank-logos-marquee">
             <div className="marquee-content">

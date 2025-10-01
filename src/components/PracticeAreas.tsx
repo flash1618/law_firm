@@ -41,7 +41,7 @@ function PracticeAreas() {
             <li>RERA Compliance</li>
           </ul>
           <div className="card-footer">
-            <span className="experience">5000+ Cases Handled</span>
+            <span className="experience">1000+ Cases Successfully Handled</span>
           </div>
         </div>
 
@@ -52,6 +52,7 @@ function PracticeAreas() {
           <ul>
             <li>Wills & Gift Deeds</li>
             <li>Succession Certificates</li>
+            <li>Succession and Heirship Certificate</li>
             <li>Probate Proceedings</li>
             <li>Estate Planning</li>
             <li>Inheritance Disputes</li>
@@ -72,7 +73,6 @@ function PracticeAreas() {
             <li>Service Deficiency Complaints</li>
             <li>Insurance Disputes</li>
             <li>Banking Complaints</li>
-            <li>E-commerce Disputes</li>
           </ul>
           <div className="card-footer">
             <span className="experience">95% Success Rate</span>
@@ -102,10 +102,8 @@ function PracticeAreas() {
           <p className="card-description">Navigate complex society laws and regulations with our specialized expertise.</p>
           <ul>
             <li>Society Formation & Registration</li>
-            <li>Bye-law Drafting & Amendment</li>
             <li>Member Disputes Resolution</li>
             <li>Election Disputes</li>
-            <li>Financial Audits & Compliance</li>
             <li>Legal Notices & Proceedings</li>
           </ul>
           <div className="card-footer">
@@ -119,7 +117,7 @@ function PracticeAreas() {
         <div className="services-grid">
           <div className="service-item">
             <h3>Legal Drafting & Notices</h3>
-            <p>Professional drafting of legal documents, notices, and contracts tailored to your specific requirements.</p>
+            <p>Professional drafting of legal documents, notices, and contracts tailored to your specific requirements. Including Title Search, Search Report, LSR I and LSR II services.</p>
           </div>
           <div className="service-item">
             <h3>Legal Consultation</h3>
@@ -135,11 +133,11 @@ function PracticeAreas() {
           </div>
           <div className="service-item">
             <h3>Drafting of Various Agreements</h3>
-            <p>Professional drafting of Sale Agreements, Resale Agreements, Development Agreements, Tripartite Agreements, Power of Attorney, and other legal documents tailored to your specific requirements.</p>
+            <p>Professional drafting of Sale Agreements, Resale Agreements, Development Agreements, Tripartite Agreements, Partnership Deed, Power of Attorney, and other legal documents.</p>
           </div>
           <div className="service-item">
             <h3>Stamp Paper Services & Notary</h3>
-            <p>Comprehensive stamp paper services and notary assistance (notary outsourced). We handle drafting and execution of various affidavits required for routine legal matters such as Rent Agreements, Gap Affidavits, Name Change Affidavits, and more.</p>
+            <p>Comprehensive stamp paper services and notary assistance (notary outsourced). We handle drafting and execution of various affidavits required for routine legal matters such as Rent Agreements, Gap Affidavits, Affidavits required for Gazette and Income Tax, and more.</p>
           </div>
         </div>
       </div>

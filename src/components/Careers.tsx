@@ -28,18 +28,15 @@ function Careers() {
 
       <div className="careers-grid">
         <div className="career-card">
-          <h3>Associate Advocate</h3>
+          <h3>Junior Advocate</h3>
           <div className="career-details">
             <p><strong>Experience:</strong> 2-5 years</p>
             <p><strong>Location:</strong> Navi Mumbai, Maharashtra</p>
-            <p><strong>Practice Areas:</strong> Family Law, Property Law, Consumer Law</p>
-          </div>
-          <div className="read-more" onClick={() => toggleCard('associate')}>
-            <p>{expandedCards['associate'] ? '− Read Less' : '+ Read More'}</p>
+            <p><strong>Type:</strong> Full-time</p>
           </div>
           {expandedCards['associate'] && (
           <div className="career-description">
-            <p>We are seeking a motivated Associate Advocate to join our growing practice. The ideal candidate will have experience in civil litigation and a passion for helping clients navigate complex legal matters.</p>
+            <p>We are seeking an enthusiastic Junior Advocate to join our growing practice. The ideal candidate will have experience in civil litigation and a passion for helping clients navigate complex legal matters.</p>
             <h4>Key Responsibilities:</h4>
             <ul>
               <li>Represent clients in court proceedings</li>
@@ -58,7 +55,10 @@ function Careers() {
             </ul>
           </div>
           )}
-          <button className="btn-primary" onClick={() => handleApplyClick('Associate Advocate')}>Apply Now</button>
+          <div className="read-more" onClick={() => toggleCard('associate')}>
+            <p>{expandedCards['associate'] ? '− Read Less' : '+ Read More'}</p>
+          </div>
+          <button className="btn-primary" onClick={() => handleApplyClick('Junior Advocate')}>Apply Now</button>
         </div>
 
         <div className="career-card">
@@ -67,9 +67,6 @@ function Careers() {
             <p><strong>Duration:</strong> 3-6 months</p>
             <p><strong>Location:</strong> Navi Mumbai, Maharashtra</p>
             <p><strong>Type:</strong> Paid Internship</p>
-          </div>
-          <div className="read-more" onClick={() => toggleCard('intern')}>
-            <p>{expandedCards['intern'] ? '− Read Less' : '+ Read More'}</p>
           </div>
           {expandedCards['intern'] && (
           <div className="career-description">
@@ -89,9 +86,13 @@ function Careers() {
               <li>Interest in civil and family law</li>
               <li>Good communication skills</li>
               <li>Commitment to learning and growth</li>
+              <li>Preferably having proficiency in Marathi language as well</li>
             </ul>
           </div>
           )}
+          <div className="read-more" onClick={() => toggleCard('intern')}>
+            <p>{expandedCards['intern'] ? '− Read Less' : '+ Read More'}</p>
+          </div>
           <button className="btn-primary" onClick={() => handleApplyClick('Legal Intern')}>Apply Now</button>
         </div>
 
@@ -101,9 +102,6 @@ function Careers() {
             <p><strong>Experience:</strong> 1-3 years</p>
             <p><strong>Location:</strong> Navi Mumbai, Maharashtra</p>
             <p><strong>Type:</strong> Full-time</p>
-          </div>
-          <div className="read-more" onClick={() => toggleCard('paralegal')}>
-            <p>{expandedCards['paralegal'] ? '− Read Less' : '+ Read More'}</p>
           </div>
           {expandedCards['paralegal'] && (
           <div className="career-description">
@@ -123,9 +121,13 @@ function Careers() {
               <li>Proficiency in Microsoft Office</li>
               <li>Strong organizational skills</li>
               <li>Attention to detail</li>
+              <li>Preferably having proficiency in Marathi language as well</li>
             </ul>
           </div>
           )}
+          <div className="read-more" onClick={() => toggleCard('paralegal')}>
+            <p>{expandedCards['paralegal'] ? '− Read Less' : '+ Read More'}</p>
+          </div>
           <button className="btn-primary" onClick={() => handleApplyClick('Paralegal')}>Apply Now</button>
         </div>
       </div>

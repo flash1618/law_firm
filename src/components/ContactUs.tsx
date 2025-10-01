@@ -110,7 +110,7 @@ function ContactUs() {
                   rel="noopener noreferrer"
                   className="address-link"
                 >
-                  Office No.1, 1st Floor, Sai Sharan CHS Complex, Sector – 8, Khanda Colony, Panvel, Navi Mumbai, Maharashtra – 410206
+                  Office No.1, 1st Floor, Sai Sharan CHS Complex, Plot No. 15, Sector – 8, Khanda Colony, Panvel, Navi Mumbai, Maharashtra – 410206
                 </a>
               </p>
               <div className="address-details">
@@ -140,7 +140,7 @@ function ContactUs() {
               <div className="consultation-note">
                 <p><strong>Important:</strong> Consultations are by appointment only. Please call ahead to schedule your visit.</p>
                 <p><strong>Free Consultation:</strong> First 10 minutes consultation is free for new clients.</p>
-                <p><strong>Stamp Paper:</strong> Not available on Saturday and Sunday.</p>
+                <p><strong>Stamp Paper:</strong> Not available on Saturday, Sunday and public holidays.</p>
               </div>
             </div>
           </div>
@@ -217,7 +217,7 @@ function ContactUs() {
                     <option value="Civil Litigation">Civil Litigation</option>
                     <option value="Criminal Law">Criminal Law</option>
                     <option value="Corporate Law">Corporate Law</option>
-                    <option value="Labour and Employment Law">Labour and Employment Law</option>
+                    <option value="Marriage Registration">Marriage Registration</option>
                     <option value="Banking and Finance Law">Banking and Finance Law</option>
                     <option value="Stamp Paper Services & Notary">Stamp Paper Services & Notary</option>
                     <option value="Other">Other</option>
