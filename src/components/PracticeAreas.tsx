@@ -117,7 +117,7 @@ function PracticeAreas() {
         <div className="services-grid">
           <div className="service-item">
             <h3>Legal Drafting & Notices</h3>
-            <p>Professional drafting of legal documents, notices, and contracts tailored to your specific requirements. Including Title Search, Search Report, LSR I and LSR II services.</p>
+            <p>Professional drafting of legal documents, notices, and contracts tailored to your specific requirements, including Title Search, Search Report, LSR I and LSR II services.</p>
           </div>
           <div className="service-item">
             <h3>Legal Consultation</h3>
