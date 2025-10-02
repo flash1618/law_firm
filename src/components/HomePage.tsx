@@ -38,6 +38,7 @@ function HomePage() {
       window.removeEventListener('disclaimerAccepted', handleDisclaimerAccepted);
     };
   }, []);
+
   const bankLogos = [
     { src: bankofindiaLogo, alt: 'Bank of India' },
     { src: centralbankLogo, alt: 'Central Bank of India' },

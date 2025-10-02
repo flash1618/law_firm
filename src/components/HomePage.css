@@ -759,3 +759,184 @@
   }
 
 }
+
+/* Simple scroll animations that work */
+.hero-section {
+  animation: fadeInUp 1s ease-out;
+}
+
+.about-us-home-section {
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.success-metrics-section {
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.banks-served-section {
+  animation: fadeInUp 0.8s ease-out 0.9s both;
+}
+
+/* Hover animations that replay on hover */
+.hero-section:hover {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.about-us-home-section:hover {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.success-metrics-section:hover {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.banks-served-section:hover {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Staggered animations for metric cards that replay */
+.metrics-grid .metric-card:nth-child(1) {
+  animation: fadeInUp 0.6s ease-out 0.8s both;
+}
+
+.metrics-grid .metric-card:nth-child(2) {
+  animation: fadeInUp 0.6s ease-out 1s both;
+}
+
+.metrics-grid .metric-card:nth-child(3) {
+  animation: fadeInUp 0.6s ease-out 1.2s both;
+}
+
+/* Replay animations on hover for metric cards */
+.metrics-grid:hover .metric-card:nth-child(1) {
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.metrics-grid:hover .metric-card:nth-child(2) {
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.metrics-grid:hover .metric-card:nth-child(3) {
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Keyframe animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Staggered animations for metric cards */
+.metrics-grid.animate-in .metric-card:nth-child(1) {
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.metrics-grid.animate-in .metric-card:nth-child(2) {
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.metrics-grid.animate-in .metric-card:nth-child(3) {
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced animations for better performance */
+[data-animate] {
+  will-change: transform, opacity;
+}
+
+.animate-in {
+  will-change: auto;
+}
+
+/* Subtle hover animations for interactivity */
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+  transition: all 0.3s ease;
+}
+
+.hero-buttons .btn-primary:hover,
+.hero-buttons .btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.metric-card {
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.bank-logo {
+  transition: all 0.3s ease;
+}
+
+.bank-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Hero text animations */
+.hero-text h1 {
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.hero-text p {
+  animation: fadeInUp 1.2s ease-out 0.2s both;
+}
+
+.hero-buttons {
+  animation: fadeInUp 1.2s ease-out 0.4s both;
+}
+
+/* Hover animations for hero text */
+.hero-text h1:hover {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-text p:hover {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-buttons:hover {
+  animation: fadeInUp 0.8s ease-out;
+}
