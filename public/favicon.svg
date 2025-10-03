@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="#1a365d" stroke="#2d3748" stroke-width="1"/>
+  
+  <!-- Scales of Justice -->
+  <g fill="#f7fafc">
+    <!-- Base -->
+    <rect x="14" y="24" width="4" height="2" rx="1"/>
+    
+    <!-- Pole -->
+    <rect x="15.5" y="8" width="1" height="16"/>
+    
+    <!-- Crossbar -->
+    <rect x="8" y="12" width="16" height="1"/>
+    
+    <!-- Left scale -->
+    <ellipse cx="10" cy="10" rx="3" ry="1.5" fill="none" stroke="#f7fafc" stroke-width="1"/>
+    <line x1="10" y1="10" x2="10" y2="12" stroke="#f7fafc" stroke-width="1"/>
+    
+    <!-- Right scale -->
+    <ellipse cx="22" cy="10" rx="3" ry="1.5" fill="none" stroke="#f7fafc" stroke-width="1"/>
+    <line x1="22" y1="10" x2="22" y2="12" stroke="#f7fafc" stroke-width="1"/>
+    
+    <!-- "SJ" text -->
+    <text x="16" y="20" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#f7fafc">SJ</text>
+  </g>
+</svg>

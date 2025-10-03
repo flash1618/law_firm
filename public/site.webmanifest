@@ -1,0 +1,27 @@
+{
+  "name": "S.J. Bondre & Co. - Law Firm",
+  "short_name": "Bondre Law",
+  "description": "Expert legal services in Panvel, New Panvel, Kamothe, Kalamboli, Khanda Colony. Property lawyer, divorce lawyer, criminal lawyer, family lawyer.",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#1a365d",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}
