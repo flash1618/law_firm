@@ -91,10 +91,10 @@ function HomePage() {
 
       <section className="banks-served-section">
         <div className="main-content-container">
-          <h2>Banks Served 🏦</h2>
+          <h2><span>Banks Served</span> <span className="emoji">🏦</span></h2>
           <p>With over three decades of experience in Real Estate and Property Law, S.J. Bondre & Co. has become a trusted legal partner for numerous national, state, and co-operative banks. Our firm is known for its precision, timely delivery, and unwavering commitment to quality in every Title Search Report we prepare.</p>
           <p>We maintain clear communication and smooth coordination with bank officials to ensure an efficient and hassle-free process. Our professionalism, consistency, and integrity have helped us build strong long-term associations, making us a reliable choice for banks seeking thorough and dependable title verification and legal documentation support.</p>
-          <h2>For Homebuyers and Property Owners 🏡</h2>
+          <h2><span>For Homebuyers and Property Owners</span> <span className="emoji">🏡</span></h2>
           <p>Before purchasing any property, conducting a Title Search is a crucial step to verify clear ownership and ensure that the property is free from legal disputes or encumbrances. It confirms that the seller holds a valid title and protects buyers from future risks or complications. A well-prepared Title Search Report provides clarity, transparency, and confidence in every transaction.</p>
           <p>At S.J. Bondre & Co., we assist homebuyers and property owners who wish to confirm that the title of their prospective house or plot is clear before making an investment. Whether you're buying your first home or expanding your property portfolio, our team ensures that your investment is legally sound and fully protected.</p>
         </div>

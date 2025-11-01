@@ -371,23 +371,35 @@
 
 .banks-served-section h2 {
   color: var(--primary-navy);
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
   margin-top: 0;
   font-size: 2.2em;
   position: relative;
   z-index: 1;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.banks-served-section h2 span {
   background: linear-gradient(45deg, var(--primary-navy), var(--accent-orange), var(--primary-navy));
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: textShimmer 4s ease-in-out infinite;
-  text-align: center;
+}
+
+.banks-served-section h2 .emoji {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: unset !important;
+  animation: none !important;
+  color: var(--primary-navy);
+  font-style: normal;
 }
 
 .banks-served-section h2:nth-of-type(2) {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 .banks-served-section h2::after {
@@ -405,9 +417,9 @@
 .banks-served-section p {
   color: var(--text-dark);
   font-size: 1.2em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.6;
   text-align: left;
 }
 
@@ -650,16 +662,17 @@
 
   .banks-served-section h2 {
     font-size: 2.2em;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.3rem;
   }
 
   .banks-served-section h2:nth-of-type(2) {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 
   .banks-served-section p {
     font-size: 1em;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
   }
 }
 

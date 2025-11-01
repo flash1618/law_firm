@@ -88,6 +88,15 @@
   margin-bottom: 0.3rem;
 }
 
+.team-description {
+  text-align: left !important;
+  line-height: 1.6;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  color: var(--text-dark) !important;
+  font-size: 0.95em !important;
+}
+
 .team-card a {
   color: var(--primary-blue);
   text-decoration: none;
