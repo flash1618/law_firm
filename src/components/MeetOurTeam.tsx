@@ -1,6 +1,21 @@
+import { useState } from 'react';
 import './MeetOurTeam.css';
 
 function MeetOurTeam() {
+  const [expandedCards, setExpandedCards] = useState<{ [key: number]: boolean }>({});
+  
+  const toggleDescription = (index: number) => {
+    setExpandedCards(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+  const truncateDescription = (text: string, maxLength: number = 150) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength) + '...';
+  };
+
   const teamMembers = [
     {
       name: 'Adv. S. J. Bondre',
@@ -80,25 +95,62 @@ function MeetOurTeam() {
     <div className="meet-our-team-container main-content-container">
       <h1>Meet Our Team</h1>
       <div className="team-grid">
-        {teamMembers.map((member, index) => (
-          <div className="team-card" key={index}>
-            <div className="team-card-image">{member.initials}</div>
-            <h2>{member.name}</h2>
-            <h3>
-              {member.name === 'Dhanashree Bondre' ? (
-                <a href="https://share.google/ncEunOL5hOqosqhRL" target="_blank" rel="noopener noreferrer">
-                  {member.role}
-                </a>
-              ) : (
-                member.role
+        {teamMembers.map((member, index) => {
+          const isExpanded = expandedCards[index];
+          const shouldTruncate = member.description && member.description.length > 150;
+          const displayDescription = shouldTruncate && !isExpanded 
+            ? truncateDescription(member.description) 
+            : member.description;
+
+          return (
+            <div className="team-card" key={index}>
+              <div className="team-card-image">{member.initials}</div>
+              <div className="team-card-header">
+                <h2>{member.name}</h2>
+                <h3>
+                  {member.name === 'Dhanashree Bondre' ? (
+                    <a href="https://share.google/ncEunOL5hOqosqhRL" target="_blank" rel="noopener noreferrer">
+                      {member.role}
+                    </a>
+                  ) : (
+                    member.role
+                  )}
+                </h3>
+                {member.designation !== 'N/A' && <p className="team-designation">{member.designation}</p>}
+              </div>
+              
+              {member.description && (
+                <div className="team-description-wrapper">
+                  <p className="team-description">{displayDescription}</p>
+                  {shouldTruncate && (
+                    <button 
+                      className="read-more-btn" 
+                      onClick={() => toggleDescription(index)}
+                      aria-label={isExpanded ? 'Read less' : 'Read more'}
+                    >
+                      {isExpanded ? 'Read Less' : 'Read More'}
+                    </button>
+                  )}
+                </div>
               )}
-            </h3>
-            {member.designation !== 'N/A' && <p>{member.designation}</p>}
-            {member.description && <p className="team-description">{member.description}</p>}
-            {member.phone !== 'N/A' && <p><a href={`tel:${member.phone.replace(/\s/g, '')}`}>{member.phone}</a></p>}
-            {member.email !== 'N/A' && <p><a href={`mailto:${member.email}`}>{member.email}</a></p>}
-          </div>
-        ))}
+              
+              <div className="team-contact-info">
+                {member.phone !== 'N/A' && (
+                  <div className="contact-item">
+                    <span className="contact-label">Phone:</span>
+                    <a href={`tel:${member.phone.replace(/\s/g, '')}`} className="contact-link">{member.phone}</a>
+                  </div>
+                )}
+                {member.email !== 'N/A' && (
+                  <div className="contact-item">
+                    <span className="contact-label">Email:</span>
+                    <a href={`mailto:${member.email}`} className="contact-link">{member.email}</a>
+                  </div>
+                )}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

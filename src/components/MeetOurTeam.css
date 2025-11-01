@@ -21,13 +21,15 @@
 .team-card {
   background-color: white;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  min-height: 400px;
 }
 
 .team-card:hover {
@@ -47,28 +49,43 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background-color: var(--light-grey); /* Placeholder background */
-  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-blue) 100%);
+  margin-bottom: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  color: var(--secondary-blue);
-  font-size: 3em;
+  color: white;
+  font-size: 2.5em;
   font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 3px solid var(--accent-orange);
+}
+
+.team-card-header {
+  margin-bottom: 1rem;
+  width: 100%;
 }
 
 .team-card h2 {
-  color: var(--secondary-blue);
-  font-size: 1.5em;
-  margin-bottom: 0.5rem;
+  color: var(--primary-navy);
+  font-size: 1.6em;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
 }
 
 .team-card h3 {
-  color: var(--dark-grey);
+  color: var(--accent-orange);
   font-size: 1.1em;
-  font-weight: 400;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.team-designation {
+  color: var(--dark-grey);
+  font-size: 0.9em;
+  font-style: italic;
+  margin-bottom: 0 !important;
 }
 
 .team-card h3 a {
@@ -82,30 +99,73 @@
   text-decoration: underline;
 }
 
-.team-card p {
-  color: var(--dark-grey);
-  font-size: 1em;
-  margin-bottom: 0.3rem;
+
+.team-description-wrapper {
+  width: 100%;
+  margin: 1.5rem 0;
+  flex-grow: 1;
 }
 
 .team-description {
-  text-align: left !important;
-  line-height: 1.6;
-  margin-top: 1rem !important;
-  margin-bottom: 1rem !important;
+  text-align: justify;
+  line-height: 1.7;
+  margin: 0 0 1rem 0 !important;
   color: var(--text-dark) !important;
   font-size: 0.95em !important;
 }
 
-.team-card a {
-  color: var(--primary-blue);
-  text-decoration: none;
+.read-more-btn {
+  background: none;
+  border: none;
+  color: var(--accent-orange);
+  font-size: 0.9em;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.3rem 0;
+  text-decoration: underline;
   transition: color 0.3s ease;
+  margin-top: 0.5rem;
 }
 
-.team-card a:hover {
-  color: var(--accent-gold);
+.read-more-btn:hover {
+  color: var(--primary-navy);
 }
+
+.team-contact-info {
+  margin-top: auto;
+  width: 100%;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--light-grey);
+}
+
+.contact-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-label {
+  color: var(--dark-grey);
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.contact-link {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: color 0.3s ease;
+  word-break: break-all;
+}
+
+.contact-link:hover {
+  color: var(--accent-orange);
+  text-decoration: underline;
+}
+
 
 @media (max-width: 768px) {
   .meet-our-team-container {
@@ -126,40 +186,49 @@
   .team-card {
     padding: 1.5rem;
     margin-bottom: 1rem;
+    min-height: 350px;
   }
 
   .team-card-image {
     width: 100px;
     height: 100px;
-    font-size: 2.5em;
+    font-size: 2.2em;
     margin-bottom: 1rem;
   }
 
   .team-card h2 {
     font-size: 1.3em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
   }
 
   .team-card h3 {
     font-size: 1em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
   }
 
-  .team-card p {
+  .team-description-wrapper {
+    margin: 1rem 0;
+  }
+
+  .team-description {
+    font-size: 0.9em !important;
+  }
+
+  .read-more-btn {
+    font-size: 0.85em;
+  }
+
+  .team-contact-info {
+    padding-top: 1rem;
+    margin-top: 1rem;
+  }
+
+  .contact-item {
     font-size: 0.9em;
-    margin-bottom: 0.5rem;
   }
 
-  .team-card a {
-    font-size: 0.95em;
-    word-break: break-all;
-    padding: 0.5rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
-
-  .team-card a:hover {
-    background-color: rgba(204, 123, 87, 0.1);
+  .contact-link {
+    font-size: 0.9em;
   }
 }
 
@@ -170,12 +239,13 @@
 
   .team-card {
     padding: 1.25rem;
+    min-height: 320px;
   }
 
   .team-card-image {
     width: 80px;
     height: 80px;
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   .team-card h2 {
@@ -186,7 +256,19 @@
     font-size: 0.95em;
   }
 
-  .team-card p {
+  .team-description {
+    font-size: 0.85em !important;
+  }
+
+  .read-more-btn {
+    font-size: 0.8em;
+  }
+
+  .contact-item {
+    font-size: 0.85em;
+  }
+
+  .contact-link {
     font-size: 0.85em;
   }
 }
