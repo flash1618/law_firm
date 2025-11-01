@@ -63,7 +63,7 @@ function MeetOurTeam() {
       phone: 'N/A',
       email: 'N/A',
       initials: 'DB',
-      description: 'He manages our registration work before the Sub-Registrar, whether it's a flat, vehicle, power of attorney, gift deed, or even a simple rent agreement - he's got you covered! He also ensures seamless processing of Certified Copies for all required documents. For clarity and guidance on the process, kindly consult Adv. S. J. Bondre first, after which you will be directed further.',
+      description: "He manages our registration work before the Sub-Registrar, whether it's a flat, vehicle, power of attorney, gift deed, or even a simple rent agreement - he's got you covered! He also ensures seamless processing of Certified Copies for all required documents. For clarity and guidance on the process, kindly consult Adv. S. J. Bondre first, after which you will be directed further.",
     },
     {
       name: 'Abhinav Khatal',
