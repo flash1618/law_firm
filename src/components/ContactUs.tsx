@@ -85,11 +85,11 @@ function ContactUs() {
               <div className="contact-list">
                 <div className="contact-item">
                   <span className="contact-label">Call:</span>
-                  <a href="tel:+919322593358" className="contact-number">+91 9322593358</a>
+                  <a href="tel:+919372680574" className="contact-number">+91 9372680574</a>
                 </div>
                 <div className="contact-item">
                   <span className="contact-label">WhatsApp:</span>
-                  <a href="https://wa.me/919322593358" className="contact-number">+91 9322593358</a>
+                  <a href="https://wa.me/919372680574" className="contact-number">+91 9372680574</a>
                 </div>
                 <div className="contact-item">
                   <span className="contact-label">Email:</span>
@@ -260,11 +260,11 @@ function ContactUs() {
           <div className="emergency-contacts">
             <div className="emergency-item">
               <span className="emergency-label">Emergency Hotline:</span>
-              <a href="tel:+919322593358" className="emergency-number">+91 9322593358</a>
+              <a href="tel:+919372680574" className="emergency-number">+91 9372680574</a>
             </div>
             <div className="emergency-item">
               <span className="emergency-label">WhatsApp:</span>
-              <a href="https://wa.me/919322593358" className="emergency-number">+91 9322593358</a>
+              <a href="https://wa.me/919372680574" className="emergency-number">+91 9372680574</a>
             </div>
           </div>
         </div>

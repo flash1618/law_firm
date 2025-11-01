@@ -364,17 +364,15 @@
 /* Banks Served Section */
 .banks-served-section {
   padding: 2rem 2rem 6rem 2rem;
-  text-align: center;
+  text-align: left;
   margin: 0 auto 6rem auto;
   position: relative;
-  overflow: hidden;
 }
-
-/* Removed old advocate logo pattern - now using custom pattern from back folder */
 
 .banks-served-section h2 {
   color: var(--primary-navy);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
   font-size: 2.2em;
   position: relative;
   z-index: 1;
@@ -385,6 +383,11 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: textShimmer 4s ease-in-out infinite;
+  text-align: center;
+}
+
+.banks-served-section h2:nth-of-type(2) {
+  margin-top: 2.5rem;
 }
 
 .banks-served-section h2::after {
@@ -402,61 +405,10 @@
 .banks-served-section p {
   color: var(--text-dark);
   font-size: 1.2em;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: 400;
-}
-
-.banks-intro {
-  margin-bottom: 0.5rem !important;
-}
-
-.banks-list {
-  margin-bottom: 1rem !important;
-}
-
-
-.rbi-note {
-  text-align: center;
-  margin: 2rem 0 1rem 0;
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, var(--accent-orange) 0%, var(--texture-brown) 100%);
-  color: var(--pure-white);
-  border-radius: 6px;
-  font-size: 1.1em;
-  box-shadow: var(--shadow-medium);
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.bank-logos-marquee {
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  max-width: 100%;
-  padding: 1rem 0;
-}
-
-.marquee-content {
-  display: inline-block;
-  animation: scroll-left 35s linear infinite;
-}
-
-.bank-logo {
-  height: 80px; /* Increased size for better visibility */
-  margin: 0 2.5rem;
-  vertical-align: middle;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.bank-logo:hover {
-  opacity: 1;
-}
-
-@keyframes scroll-left {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  line-height: 1.7;
+  text-align: left;
 }
 
 .btn-primary {
@@ -698,26 +650,16 @@
 
   .banks-served-section h2 {
     font-size: 2.2em;
+    margin-bottom: 0.8rem;
+  }
+
+  .banks-served-section h2:nth-of-type(2) {
+    margin-top: 2rem;
   }
 
   .banks-served-section p {
     font-size: 1em;
-  }
-
-
-  .rbi-note {
-    font-size: 1em;
-    padding: 0.8rem 1.5rem;
-    margin: 1.5rem 0 1rem 0;
-  }
-
-  .bank-logo {
-    height: 60px;
-    margin: 0 2rem;
-  }
-
-  .marquee-content {
-    animation-duration: 40s; /* Slower on mobile for better readability */
+    margin-bottom: 1.2rem;
   }
 }
 

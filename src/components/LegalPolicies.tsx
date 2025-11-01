@@ -33,7 +33,7 @@ function LegalPolicies() {
           
           <div className="contact-disclaimer">
             <p><strong>For Legal Advice:</strong> If you require legal advice or representation, please contact us directly to schedule a consultation. We are qualified and licensed to practice law throughout India.</p>
-            <p><strong>Contact Information:</strong> S.J. Bondre & Co. | Phone: +91 9322593358 | Email: info@bondrelawfirm.com</p>
+            <p><strong>Contact Information:</strong> S.J. Bondre & Co. | Phone: +91 9372680574 | Email: info@bondrelawfirm.com</p>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@ function LegalPolicies() {
           <p>You have the right to access your personal information, correct inaccurate information, request deletion of your information, and opt-out of communications from us.</p>
           
           <h3>Contact Us</h3>
-          <p>If you have any questions about this Privacy Policy, please contact us at info@bondrelawfirm.com or +91 9322593358.</p>
+          <p>If you have any questions about this Privacy Policy, please contact us at info@bondrelawfirm.com or +91 9372680574.</p>
         </div>
       </div>
     </div>

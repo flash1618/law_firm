@@ -60,7 +60,7 @@ function Navbar() {
         </ul>
         <div className="navbar-contact">
           <span className="contact-text">Call us Today</span>
-          <a href="tel:+919322593358" className="contact-phone">+91 9322593358</a>
+          <a href="tel:+919372680574" className="contact-phone">+91 9372680574</a>
         </div>
       </div>
     </nav>

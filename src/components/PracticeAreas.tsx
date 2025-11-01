@@ -172,7 +172,7 @@ function PracticeAreas() {
         <h2>Need Legal Assistance?</h2>
         <h3>10 Minutes Consultation</h3>
         <p><strong>Only on call</strong> - Don't hesitate and get your doubts cleared!</p>
-        <p><strong>Call:</strong> <a href="tel:+919322593358">+91 9322593358</a></p>
+        <p><strong>Call:</strong> <a href="tel:+919372680574">+91 9372680574</a></p>
         <p><strong>Email:</strong> <a href="mailto:adv.s.bondre@gmail.com">adv.s.bondre@gmail.com</a></p>
         <p><strong>By Appointment Only</strong></p>
         <Link to="/contact" className="free-consultation"><strong>First 10 minutes consultation is FREE for new clients!</strong></Link>

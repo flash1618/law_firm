@@ -1,16 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './HomePage.css';
-import bankofindiaLogo from '../assets/banks/Bank_Of_India.png';
-import centralbankLogo from '../assets/banks/centralbank.png';
-import statebankofindiaLogo from '../assets/banks/StateBankOfIndia.png';
-import unionbankofindiaLogo from '../assets/banks/union-bank-of-india.svg';
-import federalbankLogo from '../assets/banks/Federal_Bank.png';
-import dnyandeepLogo from '../assets/banks/Dnyandeep.jpg';
-import gsmahanagatLogo from '../assets/banks/GSMahanagat.jpg';
-import ssbankLogo from '../assets/banks/SS_Bank.png';
-import baramatiLogo from '../assets/banks/theBaramati.jpg';
-import nationalLogo from '../assets/banks/TheNational.jpg';
 import justiceImage from '../assets/justice/justice2.png';
 
 function HomePage() {
@@ -38,30 +28,6 @@ function HomePage() {
       window.removeEventListener('disclaimerAccepted', handleDisclaimerAccepted);
     };
   }, []);
-
-  const bankLogos = [
-    { src: bankofindiaLogo, alt: 'Bank of India' },
-    { src: centralbankLogo, alt: 'Central Bank of India' },
-    { src: statebankofindiaLogo, alt: 'State Bank of India' },
-    { src: unionbankofindiaLogo, alt: 'Union Bank of India' },
-    { src: federalbankLogo, alt: 'Federal Bank' },
-    { src: dnyandeepLogo, alt: 'Dnyandeep Bank' },
-    { src: gsmahanagatLogo, alt: 'GS Mahanagat Bank' },
-    { src: ssbankLogo, alt: 'SS Bank' },
-    { src: baramatiLogo, alt: 'The Baramati Bank' },
-    { src: nationalLogo, alt: 'The National Bank' },
-    // Duplicate for continuous scroll effect
-    { src: bankofindiaLogo, alt: 'Bank of India' },
-    { src: centralbankLogo, alt: 'Central Bank of India' },
-    { src: statebankofindiaLogo, alt: 'State Bank of India' },
-    { src: unionbankofindiaLogo, alt: 'Union Bank of India' },
-    { src: federalbankLogo, alt: 'Federal Bank' },
-    { src: dnyandeepLogo, alt: 'Dnyandeep Bank' },
-    { src: gsmahanagatLogo, alt: 'GS Mahanagat Bank' },
-    { src: ssbankLogo, alt: 'SS Bank' },
-    { src: baramatiLogo, alt: 'The Baramati Bank' },
-    { src: nationalLogo, alt: 'The National Bank' },
-  ];
 
   return (
     <div className="homepage">
@@ -125,15 +91,12 @@ function HomePage() {
 
       <section className="banks-served-section">
         <div className="main-content-container">
-          <h2>Banks Served</h2>
-          <p className="banks-list">The Satara Sahakari Bank, The National Co-Operative Bank, Bank Of India, Dnyandeep Credit Society, Central Bank Of India, Union Bank Of India, GS Mahanagar Co-Operative Bank, The Baramati Sahakari Bank Ltd., Federal Bank, State Bank Of India, Reserve Bank Of India.</p>
-          <div className="bank-logos-marquee">
-            <div className="marquee-content">
-              {bankLogos.map((logo, index) => (
-                <img key={index} src={logo.src} alt={logo.alt} className="bank-logo" />
-              ))}
-            </div>
-          </div>
+          <h2>Banks Served 🏦</h2>
+          <p>With over three decades of experience in Real Estate and Property Law, S.J. Bondre & Co. has become a trusted legal partner for numerous national, state, and co-operative banks. Our firm is known for its precision, timely delivery, and unwavering commitment to quality in every Title Search Report we prepare.</p>
+          <p>We maintain clear communication and smooth coordination with bank officials to ensure an efficient and hassle-free process. Our professionalism, consistency, and integrity have helped us build strong long-term associations, making us a reliable choice for banks seeking thorough and dependable title verification and legal documentation support.</p>
+          <h2>For Homebuyers and Property Owners 🏡</h2>
+          <p>Before purchasing any property, conducting a Title Search is a crucial step to verify clear ownership and ensure that the property is free from legal disputes or encumbrances. It confirms that the seller holds a valid title and protects buyers from future risks or complications. A well-prepared Title Search Report provides clarity, transparency, and confidence in every transaction.</p>
+          <p>At S.J. Bondre & Co., we assist homebuyers and property owners who wish to confirm that the title of their prospective house or plot is clear before making an investment. Whether you're buying your first home or expanding your property portfolio, our team ensures that your investment is legally sound and fully protected.</p>
         </div>
       </section>
     </div>

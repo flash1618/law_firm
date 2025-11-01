@@ -6,7 +6,7 @@ function MeetOurTeam() {
       name: 'Adv S. J. Bondre',
       role: 'Senior Advocate',
       designation: 'B.Com, LL.B.',
-      phone: '+91 9322593358',
+      phone: '+91 9372680574',
       email: 'adv.s.bondre@gmail.com',
       initials: 'SJB',
     },
