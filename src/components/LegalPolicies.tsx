@@ -32,7 +32,7 @@ function LegalPolicies() {
           <p>We reserve the right to modify this disclaimer at any time without prior notice. Your continued use of this website after any such modifications constitutes your acceptance of the updated disclaimer.</p>
           
           <div className="contact-disclaimer">
-            <p><strong>For Legal Advice:</strong> If you require legal advice or representation, please contact us directly to schedule a consultation. We are licensed to practice law in Maharashtra, India.</p>
+            <p><strong>For Legal Advice:</strong> If you require legal advice or representation, please contact us directly to schedule a consultation. We are qualified and licensed to practice law throughout India.</p>
             <p><strong>Contact Information:</strong> S.J. Bondre & Co. | Phone: +91 9322593358 | Email: info@bondrelawfirm.com</p>
           </div>
         </div>
@@ -45,13 +45,7 @@ function LegalPolicies() {
           <p>By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
           
           <h3>Use License</h3>
-          <p>Permission is granted to temporarily download one copy of the materials on S.J. Bondre & Co.'s website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
-          <ul>
-            <li>modify or copy the materials</li>
-            <li>use the materials for any commercial purpose or for any public display (commercial or non-commercial)</li>
-            <li>attempt to decompile or reverse engineer any software contained on the website</li>
-            <li>remove any copyright or other proprietary notations from the materials</li>
-          </ul>
+          <p>Permission is granted to temporarily download one copy of the materials on S.J. Bondre & Co.'s website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials, use the materials for any commercial purpose or for any public display (commercial or non-commercial), attempt to decompile or reverse engineer any software contained on the website, or remove any copyright or other proprietary notations from the materials.</p>
           
           <h3>Disclaimer</h3>
           <p>The materials on S.J. Bondre & Co.'s website are provided on an 'as is' basis. S.J. Bondre & Co. makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
@@ -63,7 +57,7 @@ function LegalPolicies() {
           <p>The materials appearing on S.J. Bondre & Co.'s website could include technical, typographical, or photographic errors. S.J. Bondre & Co. does not warrant that any of the materials on its website are accurate, complete, or current. S.J. Bondre & Co. may make changes to the materials contained on its website at any time without notice.</p>
           
           <h3>Links</h3>
-          <p>S.J. Bondre & Co. has not reviewed all of the sites linked to our website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by S.J. Bondre & Co. of the site. Use of any such linked website is at the user's own risk.</p>
+          <p>S.J. Bondre & Co. may provide links to external sites for convenience; however, we do not endorse or assume responsibility for their content.</p>
           
           <h3>Modifications</h3>
           <p>S.J. Bondre & Co. may revise these terms of service for its website at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms of service.</p>
@@ -74,22 +68,10 @@ function LegalPolicies() {
         <h2>Privacy Policy</h2>
         <div className="privacy-content">
           <h3>Information We Collect</h3>
-          <p>We may collect personal information that you voluntarily provide to us when you:</p>
-          <ul>
-            <li>Contact us through our website</li>
-            <li>Schedule a consultation</li>
-            <li>Subscribe to our newsletter</li>
-            <li>Fill out forms on our website</li>
-          </ul>
+          <p>We may collect personal information that you voluntarily provide to us when you contact us through our website, schedule a consultation, subscribe to our newsletter, or fill out forms on our website.</p>
           
           <h3>How We Use Your Information</h3>
-          <p>We use the information we collect to:</p>
-          <ul>
-            <li>Respond to your inquiries and provide legal services</li>
-            <li>Send you information about our services</li>
-            <li>Improve our website and services</li>
-            <li>Comply with legal obligations</li>
-          </ul>
+          <p>We use the information we collect to respond to your inquiries and provide legal services, send you information about our services, improve our website and services, and comply with legal obligations.</p>
           
           <h3>Information Sharing</h3>
           <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as required by law or as necessary to provide our services.</p>
@@ -98,13 +80,7 @@ function LegalPolicies() {
           <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
           
           <h3>Your Rights</h3>
-          <p>You have the right to:</p>
-          <ul>
-            <li>Access your personal information</li>
-            <li>Correct inaccurate information</li>
-            <li>Request deletion of your information</li>
-            <li>Opt-out of communications from us</li>
-          </ul>
+          <p>You have the right to access your personal information, correct inaccurate information, request deletion of your information, and opt-out of communications from us.</p>
           
           <h3>Contact Us</h3>
           <p>If you have any questions about this Privacy Policy, please contact us at info@bondrelawfirm.com or +91 9322593358.</p>

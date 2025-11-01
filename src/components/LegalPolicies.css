@@ -5,6 +5,7 @@
   margin: 0 auto;
   line-height: 1.7;
   background-color: var(--pure-white);
+  text-align: left;
 }
 
 .legal-policies-container h1 {
@@ -27,7 +28,7 @@
   color: var(--primary-blue);
   font-size: 2.2em;
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   border-bottom: 3px solid var(--accent-gold);
   padding-bottom: 0.5rem;
 }
@@ -63,7 +64,7 @@
   background-color: var(--light-grey);
   padding: 1.5rem;
   border-radius: 5px;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .contact-disclaimer {
@@ -100,7 +101,7 @@
 
   .policy-section h2 {
     font-size: 1.8em;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.5rem;
     padding-bottom: 0.75rem;
   }
 
@@ -131,7 +132,7 @@
   .terms-content,
   .privacy-content {
     padding: 1.25rem;
-    margin-top: 1.25rem;
+    margin-top: 0.5rem;
   }
 
   .contact-disclaimer {
